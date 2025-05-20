@@ -294,10 +294,15 @@ $yellow: #FDF7BF;
     //&.editing{
         #page{
             .main-inner{
-                #page-header{
+                #page-header, .secondary-navigation{
                     display: none;
                 } 
                 #page-content{
+                    div[role=main]{
+                        .modified{
+                            display: none;
+                        }
+                    }
                     .activity-header{
                         display: none;
                     }
