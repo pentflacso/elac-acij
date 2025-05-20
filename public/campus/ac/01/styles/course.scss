@@ -1,0 +1,30 @@
+@use '../../../base/styles/general';
+
+/* HOJA DE RECURSOS */
+
+
+/* Le pongo los estilos con mixin */
+
+.cmid-2975439 {
+    @include general.hoja-recursos;
+}
+
+
+/* BBDD - AMAD - SESIÓN 1 */
+
+.cmid-2975252,
+.cmid-2975253 {
+    @include general.bbdd-1col;
+}
+
+
+/* BBDD - GESTIC */
+
+.cmid-2975452,
+.cmid-2975448,
+.cmid-2975451,
+.cmid-2975450,
+.cmid-2975447,
+.cmid-2975449 {
+    @include general.bbdd-1col;
+}
