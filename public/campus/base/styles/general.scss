@@ -33,21 +33,21 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 /* MIXINS */
 
 @mixin title {
-    font-family: 'Roboto' !important;
+    font-family: 'Arial' !important;
     font-size: $fs-lg-xl !important;
     color: $primary;
     font-weight: 500 !important;
 }
 
 @mixin subtitle {
-    font-family: 'Roboto' !important;
+    font-family: 'Arial' !important;
     font-size: $fs-md !important;
     color: $primary !important;
     font-weight: 500 !important;
 }
 
 @mixin body {
-    font-family: 'Roboto' !important;
+    font-family: 'Arial' !important;
     font-size: $fs-base !important;
     color: $primary !important;
     font-weight: 400 !important;
@@ -234,7 +234,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
         background-color: $grey1;
         padding: 40px;
         font-size: 16px;
-        font-family: 'Roboto';
+        font-family: 'Arial';
         margin: 40px 0;
         position: relative;
         .sesion {
@@ -272,7 +272,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
         }
         h3 {
             font-weight: 500 !important;
-            font-family: 'Roboto';
+            font-family: 'Arial';
             color: $primary;
         }
         .extra {
@@ -514,7 +514,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
             right: 28px;
         }
         .pent-texto {
-            font-family: 'Roboto' !important;
+            font-family: 'Arial' !important;
             margin: 28px 0;
         }
     }
@@ -679,7 +679,7 @@ body.home {
                                                 .no-overflow {
                                                     margin-top: 0 !important;
                                                     h2 {
-                                                        font-family: 'Roboto' !important;
+                                                        font-family: 'Arial' !important;
                                                         font-size: $fs-base !important;
                                                         color: $primary;
                                                         font-weight: 500 !important;
@@ -960,12 +960,12 @@ body.home:not(.editing) {
     }
     h4 {
         @include subtitle;
-        /* font-family: 'Roboto';
+        /* font-family: 'Arial';
         color: $primary !important; */
     }
     h6 {
         font-size: $fs-sm;
-        font-family: 'Roboto';
+        font-family: 'Arial';
         font-weight: 400 !important;
         color: $primary;
     }
@@ -1014,7 +1014,7 @@ body.home:not(.editing) {
             text-decoration-thickness: .10em;
             text-underline-offset: .15em;
             color: $primary;
-            font-family: 'Roboto';
+            font-family: 'Arial';
             font-weight: bold;
             word-wrap: break-word;
             &:hover {
@@ -1092,7 +1092,7 @@ body.home:not(.editing) {
                 h3.panel-title {
                     padding-block: 1rem;
                     a {
-                        font-family: 'Roboto';
+                        font-family: 'Arial';
                         color: $primary;
                         text-decoration: none;
                         &:hover {
@@ -1114,7 +1114,7 @@ body.home:not(.editing) {
                     text-decoration-thickness: .10em;
                     text-underline-offset: .15em;
                     color: $primary;
-                    font-family: 'Roboto';
+                    font-family: 'Arial';
                     font-weight: bold;
                     word-wrap: break-word;
                     &:hover {
@@ -1277,7 +1277,7 @@ body.home:not(.editing) {
             color: $primary;
             text-decoration: none !important;
             font-weight: 400 !important;
-            font-family: 'Roboto' !important;
+            font-family: 'Arial' !important;
             &:hover {
                 color: $grey3 !important;
                 text-decoration: none;
@@ -1338,7 +1338,7 @@ body.home:not(.editing) {
                 section.block_html {
                     .card-body {
                         h5 {
-                            font-family: 'Roboto';
+                            font-family: 'Arial';
                             font-weight: 400 !important;
                             background-color: $primary;
                         }
@@ -1447,7 +1447,7 @@ body.home:not(.editing) {
                             background-color: transparent;
                             padding: 0;
                             border: none;
-                            font-family: 'Roboto';
+                            font-family: 'Arial';
                             color: $primary;
                             h1 {
                                 @include title;
@@ -1480,7 +1480,7 @@ body.home:not(.editing) {
                                     text-decoration-thickness: .10em;
                                     text-underline-offset: .15em;
                                     color: $primary;
-                                    font-family: 'Roboto';
+                                    font-family: 'Arial';
                                     font-weight: bold;
                                     word-wrap: break-word;
                                     &:hover {
@@ -1521,7 +1521,7 @@ body.home:not(.editing) {
                                     text-decoration-thickness: .10em;
                                     text-underline-offset: .15em;
                                     color: $primary;
-                                    font-family: 'Roboto';
+                                    font-family: 'Arial';
                                     font-weight: bold;
                                     word-wrap: break-word;
                                     &:hover {
@@ -1749,7 +1749,7 @@ body.home:not(.editing) {
     }
     /* tablas */
     table {
-        font-family: 'Roboto';
+        font-family: 'Arial';
         color: $primary;
         thead {
             tr {
@@ -1768,7 +1768,7 @@ body.home:not(.editing) {
                     border: 1px solid $grey2;
                     padding: 0.5rem;
                     a {
-                        font-family: 'Roboto' !important;
+                        font-family: 'Arial' !important;
                         font-weight: 500 !important;
                         color: $primary !important;
                         text-decoration-style: solid !important;
@@ -2015,7 +2015,7 @@ body:not(.home) {
                                                 color: $grey3;
                                                 font-size: $fs-base;
                                                 font-weight: 400 !important;
-                                                font-family: 'Roboto';
+                                                font-family: 'Arial';
                                                 margin-bottom: 2rem;
                                                 line-height: 120%;
                                             }
@@ -2116,7 +2116,7 @@ body:not(.home) {
                                 text-decoration-thickness: .10em;
                                 text-underline-offset: .15em;
                                 color: $primary;
-                                font-family: 'Roboto';
+                                font-family: 'Arial';
                                 font-weight: bold;
                                 word-wrap: break-word;
                                 &:hover {
@@ -2138,7 +2138,7 @@ body:not(.home) {
                                     text-decoration-thickness: .10em;
                                     text-underline-offset: .15em;
                                     color: $primary;
-                                    font-family: 'Roboto';
+                                    font-family: 'Arial';
                                     font-weight: bold;
                                     word-wrap: break-word;
                                     &:hover {
@@ -2297,7 +2297,7 @@ body:not(.home) {
     #region-main {
         /* tablas */
         table {
-            font-family: 'Roboto';
+            font-family: 'Arial';
             a:not(.dropdown-item) {
                 color: $primary !important;
                 text-decoration: underline;
@@ -2496,7 +2496,7 @@ body {
         #page-content {
             div[role="main"] {
                 h5 {
-                    font-family: 'Roboto';
+                    font-family: 'Arial';
                     color: $primary;
                 }
                 /* Buscador */
@@ -2725,7 +2725,7 @@ body {
                 }
             }
             a {
-                font-family: 'Roboto';
+                font-family: 'Arial';
                 font-weight: 500;
                 font-size: $fs-base;
                 color: $primary !important;
@@ -2772,7 +2772,7 @@ body {
     &#page-mod-choice-view,
     &#page-mod-data-view {
         h3 {
-            font-family: 'Roboto' !important;
+            font-family: 'Arial' !important;
         }
         .fp-file-download,
         .fp-file-cancel {
@@ -2809,7 +2809,7 @@ body {
     &#page-course-view-topics {
         .modal-content {
             h5 {
-                font-family: 'Roboto';
+                font-family: 'Arial';
                 color: $primary;
             }
             .modal-body {
