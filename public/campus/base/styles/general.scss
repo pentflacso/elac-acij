@@ -26,7 +26,11 @@ $black: #464646;
 $gray-1: #AAAAAA;
 $gray-2: #F3F3F3;
 $white: #ffffff;
-$agua-green: #3AB8BC;
+$violet: #A36BCE;
+$sky-blue: #39A4F5;
+$aqua-green: #3AB8BC;
+$apple-green: #69B620;
+$orange: #F56B30;
 $yellow: #FDF7BF;
 
 
@@ -55,13 +59,13 @@ $yellow: #FDF7BF;
     transition: all .1s ease-out;
 
     @if $variant == primary {
-        background-color: $agua-green;
+        background-color: $aqua-green;
         color: white;
     }
     
     @if $variant == secondary {
         background-color: $white;
-        color: $agua-green;
+        color: $aqua-green;
     }
 }
 
@@ -96,7 +100,7 @@ $yellow: #FDF7BF;
         max-width: none !important;
         height: 200px;
         width: 100%;
-        background-color: $agua-green;
+        background-color: $aqua-green;
         color: $white;
     }
 
@@ -158,8 +162,9 @@ $yellow: #FDF7BF;
         }
     } 
     
-   &:not(.editing){
-   //&.editing{
+    // Aplica estilos cuando se desactiva el modo edición.
+    &:not(.editing){
+    //&.editing{
         #page-content{                 
             ul.topics{
                 .section{
@@ -232,22 +237,75 @@ $yellow: #FDF7BF;
 
 /* ESTILOS PÁGINAS */
 
-.pagelayout-standard #page.drawers .main-inner, body.limitedwidth #page.drawers .main-inner
-{
-    max-width: none !important;
-}
+.pagelayout-incourse{
+    #page-wrapper{
+        #page{
+            padding: 0;
+            overflow-x: hidden;
+            .main-inner{
+                margin: 0;
+                padding: 0;
+                max-width: none !important;
+                width: 100%;
+                #page-content{
+                    div[role=main]{
+                        max-width: 1500px;
+                        margin: 0 auto;
+                        .page-whatsapp{
+                            h2{
+                                @include font-level-1;
+                                font-weight: 700;
+                                color: $black; 
+                                text-align: center;
+                                margin-bottom: 60px;
+                            }
+                            .wrapper-messages{
+                                background-color: $gray-2;
+                                padding: 20px;                
+                                margin: 30px 0 30px 0;
+                                padding: 25px 60px 25px 60px;
+                                @include border-radius-1;
+                                .message-row{ 
+                                    width: 100%;
+                                    display: flex;                                   
+                                    .message-card{
+                                        background-color: $white;
+                                        padding: 20px;
+                                        border-radius: 20px;
+                                        width: 48%;
+                                        &.left{
+                                            margin-right: auto;
+                                        }
+                                        &.right{
+                                            margin-left: auto;
+                                        }
+                                    }                                    
+                                }
+                            }                            
+                        } 
+                    }
+                }
+            }
+        }
+    }
 
-.page-whatsapp
-{
-    .msg
-    {
-        background-color: #ffff00;
-        padding: 20px;
-        border-radius: 20px;
-        margin: 20px 0 20px 0;
+    // Aplica estilos cuando se desactiva el modo edición.
+    &:not(.editing){
+    //&.editing{
+        #page{
+            .main-inner{
+                #page-header{
+                    display: none;
+                } 
+                #page-content{
+                    .activity-header{
+                        display: none;
+                    }
+                }
+            }
+        }               
     }
 }
-
 
 
 
