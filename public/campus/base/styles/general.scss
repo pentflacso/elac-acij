@@ -68,9 +68,12 @@ $yellow: #FDF7BF;
 
 // Border radius
 @mixin border-radius-1 {
-    border-radius: 35px;
+    border-radius: 40px;
 }
 
+@mixin border-radius-2 {
+    border-radius: 30px;
+}
 
 /* ------------------------------------------------------------ */
 
@@ -91,6 +94,7 @@ $yellow: #FDF7BF;
     }
     #page-header{
         max-width: none !important;
+        height: 200px;
         width: 100%;
         background-color: $agua-green;
         color: $white;
@@ -122,7 +126,18 @@ $yellow: #FDF7BF;
                         @include font-level-3;
                         font-weight: 400;
                         color: $black;
-                        margin-bottom: 25px;
+                        margin-bottom: 20px;
+                        a{
+                            font-weight: 700;
+                            text-decoration: underline;
+                            color: $black;
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        height: auto;
+                        @include border-radius-2;
+                        margin-top: 25px;
                     }
                     .custom-btns{
                         display: flex;   
