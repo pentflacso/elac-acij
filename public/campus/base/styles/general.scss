@@ -1,3 +1,8 @@
+
+
+
+
+
 /* COLORES */
 
 $primary: #152F4E;
@@ -32,6 +37,49 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 
 /* MIXINS */
 
+@mixin btn-primario {
+    background-color: $primary !important;
+    color: white !important;
+    background-image: none;
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    border: 1px solid $primary;
+    height: initial;
+    &:hover {
+        background-color: $grey2 !important;
+        color: $primary !important;
+        outline: none;
+        box-shadow: none !important;
+        border-color: $grey2 !important;
+    }
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+@mixin btn-secundario {
+    background-color: $secondary !important;
+    color: white !important;
+    background-image: none;
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    border: 1px solid $primary;
+    height: initial;
+    &:hover {
+        background-color: $grey2 !important;
+        color: $primary !important;
+        outline: none;
+        box-shadow: none !important;
+        border-color: $grey2 !important;
+    }
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+
 @mixin title {
     font-family: 'Arial' !important;
     font-size: $fs-lg-xl !important;
@@ -52,27 +100,6 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     color: $primary !important;
     font-weight: 400 !important;
     line-height: 1.4 !important;
-}
-
-@mixin btn-primario {
-    background-color: $primary !important;
-    color: white !important;
-    background-image: none;
-    padding: 0.5rem 1rem;
-    border-radius: 500px;
-    border: 1px solid $primary;
-    height: initial;
-    &:hover {
-        background-color: $grey2 !important;
-        color: $primary !important;
-        outline: none;
-        box-shadow: none !important;
-        border-color: $grey2 !important;
-    }
-    &:focus {
-        box-shadow: none !important;
-        outline: none !important;
-    }
 }
 
 @mixin btn-secundario {
@@ -2862,5 +2889,54 @@ body {
         opacity: 1;
         display: block;
         transition: all 1s ease !important;
+    }
+}
+
+
+
+/* PÁGINA PRINCIPAL */
+#page-course-view-topics
+{
+    ul.topics
+    {
+        .section
+        {
+            padding: 20px;
+            background-color: #eaeaea;
+            border-radius: 20px;
+            margin: 40px 0 40px 0;
+
+            .summarytext
+            {
+                text-align: center;
+                .btn
+                {    
+                    @include btn-secundario;
+                    &:first-child
+                    {
+                        @include btn-primario;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* PÁGINAS */
+
+
+.pagelayout-standard #page.drawers .main-inner, body.limitedwidth #page.drawers .main-inner
+{
+    max-width: none !important;
+}
+
+.page-whatsapp
+{
+    .msg
+    {
+        background-color: #ffff00;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 20px 0 20px 0;
     }
 }
