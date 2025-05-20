@@ -38,10 +38,31 @@ $yellow: #FDF7BF;
     font-size: 22px;
 }
 @mixin font-level-3 {
-    font-size: 18px;
+    font-size: 20px;
 }
 @mixin font-level-4 {
     font-size: 14px;
+}
+
+
+// Buttons
+@mixin button($variant: primary) {    
+    @include font-level-3;  
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 50px;
+    transition: all .1s ease-out;
+
+    @if $variant == primary {
+        background-color: $agua-green;
+        color: white;
+    }
+    
+    @if $variant == secondary {
+        background-color: $white;
+        color: $agua-green;
+    }
 }
 
 
@@ -82,25 +103,115 @@ $yellow: #FDF7BF;
             .section{
                 padding: 20px;
                 background-color: $gray-2;
-                margin: 40px 0 40px 0;
+                margin: 30px 0 30px 0;
+                padding: 20px 15px 60px 15px;
                 @include border-radius-1;
-                .sectionname{
-                    @include font-level-1;
-                    font-weight: 700;
-                    color: $black; 
-                }
+                .course-section-header{
+                    .sectionname{
+                        @include font-level-1;
+                        font-weight: 700;
+                        line-height: 110%;
+                        color: $black; 
+                    }
+                }                
                 .summarytext{
                     text-align: center;
-                    .btn{    
-                        //@include btn-secundario;
-                        &:first-child{
-                        //  @include btn-primario;
-                        }
+                    max-width: 800px;
+                    margin: 40px auto 0 auto!important;
+                    p{
+                        @include font-level-3;
+                        font-weight: 400;
+                        color: $black;
+                        margin-bottom: 25px;
+                    }
+                    .custom-btns{
+                        display: flex;   
+                        justify-content: center;      
+                        margin-top: 45px;                  
+                        a{
+                            @include button(secondary);
+                            &:first-child{
+                            @include button(primary);
+                            }
+                            &:nth-child(2){
+                                margin-left: 15px;
+                            }
+                        }                         
                     }
                 }
             }
         }
-    }    
+    } 
+    
+   &:not(.editing){
+   //&.editing{
+        #page-content{                 
+            ul.topics{
+                .section{
+                    .course-section-header{
+                        .sectionbadges{
+                            display: none!important;
+                        }
+                        .section_action_menu{
+                            display: none!important;
+                        }
+                        .sectionname{
+                            @include font-level-1;
+                            font-weight: 700;
+                            color: $black; 
+                        }
+                        div{
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            padding: 40px 0 0 0;                         
+                            h3{
+                                text-align: center;
+                                max-width: 800px;
+                                .quickediticon{
+                                    display: none;
+                                }
+                            }
+                            .icons-collapse-expand{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                background-color: $white;
+                                width: 50px;
+                                height: 50px;
+                                .icon{
+                                    font-size: 22px;
+                                    width: 22px;
+                                    height: 22px;
+                                }
+                            }
+                        }
+                    } 
+                    .course-content-item-content{                        
+                        .description{
+                            display: none;
+                        }  
+                        .divider{
+                            display: none;
+                        }
+                        ul.section{
+                            display: none!important;
+                        }
+                        .section_availability{
+                            display: none!important;
+                        }
+                        .btn{
+                            display: none!important;
+                        }
+                        .changenumsections{
+                            display: none!important;
+                        }
+                    }               
+                }
+            }
+        } 
+    }
 }
 
 
