@@ -308,7 +308,9 @@ $yellow: #FDF7BF;
                                     }
                                 }
                                 .expanded-icon{
-                                    transform: rotate(180deg);
+                                    .icon{
+                                        transform: rotate(180deg);
+                                    }                                    
                                 }
                             }
                         }
