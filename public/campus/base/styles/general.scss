@@ -84,13 +84,14 @@ $yellow: #FDF7BF;
 
 /* ESTILOS PÁGINA PRINCIPAL */
 
-#page-course-view-topics.pagelayout-course
+#page-course-view-topics
 {
     #page-wrapper{
         #page{
             padding: 0;
             overflow-x: hidden;
             .main-inner{
+                max-width: none !important;
                 margin: 0;
                 padding: 0;
             }
