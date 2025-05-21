@@ -49,6 +49,7 @@ $yellow: #FDF7BF;
 }
 @mixin font-level-3 {
     font-size: 18px;
+    line-height: 140%;
     @media screen and (max-width: 576px){
         font-size: 16px;
     }
@@ -167,15 +168,15 @@ $yellow: #FDF7BF;
                         width: 90%;
                         height: auto;
                         @include border-radius-2;
-                        margin-top: 25px auto 0 auto;
+                        margin: 25px auto 0 auto;
                         @media screen and (max-width: 576px){                            
-                            margin-top: 10px;
+                            margin-top: 5px;
                         }
                     }
                     .reels{
                         display: flex;
                         justify-content: space-between;
-                        margin: 40px 0 20px 0;
+                        margin: 40px 0 40px 0;
                         @media screen and (max-width: 576px){                           
                             flex-wrap: wrap;
                             margin: 32px 0 10px 0;
@@ -397,7 +398,6 @@ $yellow: #FDF7BF;
                                         p{
                                             @include font-level-3;
                                             font-weight: 400;
-                                            line-height: 140%;
                                             color: $black;
                                             margin-bottom: 0;
                                             &.name{
