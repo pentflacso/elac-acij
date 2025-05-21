@@ -37,12 +37,20 @@ $yellow: #FDF7BF;
 // Typography Levels
 @mixin font-level-1 {
     font-size: 34px;
+    @media screen and (max-width: 1024px){
+        font-size: 24px;
+    }
 }
 @mixin font-level-2 {
-    font-size: 22px;
+    @media screen and (max-width: 1024px){
+        font-size: 18px;
+    }
 }
 @mixin font-level-3 {
     font-size: 20px;
+    @media screen and (max-width: 1024px){
+        font-size: 16px;
+    }
 }
 @mixin font-level-4 {
     font-size: 14px;
@@ -93,7 +101,7 @@ $yellow: #FDF7BF;
             .main-inner{
                 max-width: none !important;
                 margin: 0;
-                padding: 0;
+                padding: 0;                
             }
         }
     }
@@ -105,7 +113,10 @@ $yellow: #FDF7BF;
         color: $white;
     }
 
-    #page-content{        
+    #page-content{   
+        @media screen and (max-width: 1024px){
+            padding: 0 15px;
+        }     
         ul.topics{
             max-width: 1500px!important;
             margin: 0 auto;
@@ -144,17 +155,57 @@ $yellow: #FDF7BF;
                         @include border-radius-2;
                         margin-top: 25px;
                     }
+                    .reels{
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 40px 0 20px 0;
+                        @media screen and (max-width: 600px){                           
+                            flex-wrap: wrap;
+                        }
+                        .video-wrapper{
+                            width: 48.5%;
+                            overflow: hidden;
+                            @include border-radius-2;                            
+                            @media screen and (max-width: 600px){
+                                width: 90%;
+                                margin: 0 auto 20px auto;
+                            }
+                            .mediaplugin{
+                                width: 100%;                                
+                                height: auto;
+                                margin: 0;
+                                div{
+                                    max-width: 100%!important;
+                                }
+                            }                            
+                        }
+                    }
+                    .custom-audio{
+                        margin: 30px auto 30px auto;
+                        width: 50%;
+                        @media screen and (max-width: 1024px){
+                            width: 80%;
+                        }
+                    }
                     .custom-btns{
                         display: flex;   
                         justify-content: center;      
-                        margin-top: 45px;                  
+                        margin-top: 45px;       
+                        @media screen and (max-width: 600px){                            
+                            flex-direction: column;
+                            align-items: center;
+                        }           
                         a{
+                            width: fit-content;
                             @include button(secondary);
                             &:first-child{
                             @include button(primary);
                             }
                             &:nth-child(2){
                                 margin-left: 15px;
+                                @media screen and (max-width: 600px){
+                                    margin: 15px 0 0 0;
+                                }
                             }
                         }                         
                     }
