@@ -85,10 +85,16 @@ $yellow: #FDF7BF;
 // Border radius
 @mixin border-radius-1 {
     border-radius: 40px;
+    @media screen and (max-width: 576px){
+        border-radius: 20px;
+    }
 }
 
 @mixin border-radius-2 {
     border-radius: 30px;
+    @media screen and (max-width: 576px){
+        border-radius: 15px;
+    }
 }
 
 /* ------------------------------------------------------------ */
@@ -143,6 +149,9 @@ $yellow: #FDF7BF;
                     text-align: center;
                     max-width: 800px;
                     margin: 40px auto 0 auto!important;
+                    @media screen and (max-width: 576px){
+                        margin: 20px auto 0 auto!important;
+                    }
                     p{
                         @include font-level-3;
                         font-weight: 400;
@@ -159,6 +168,9 @@ $yellow: #FDF7BF;
                         height: auto;
                         @include border-radius-2;
                         margin-top: 25px;
+                        @media screen and (max-width: 576px){                            
+                            margin-top: 10px;
+                        }
                     }
                     .reels{
                         display: flex;
@@ -166,6 +178,7 @@ $yellow: #FDF7BF;
                         margin: 40px 0 20px 0;
                         @media screen and (max-width: 576px){                           
                             flex-wrap: wrap;
+                            margin: 32px 0 10px 0;
                         }
                         .video-wrapper{
                             width: 48.5%;
@@ -199,6 +212,7 @@ $yellow: #FDF7BF;
                         @media screen and (max-width: 576px){                            
                             flex-direction: column;
                             align-items: center;
+                            margin-top: 30px; 
                         }           
                         a{
                             width: fit-content;
@@ -262,7 +276,7 @@ $yellow: #FDF7BF;
                                 text-align: center;
                                 max-width: 800px;
                                 @media screen and (max-width: 1024px){
-                                    max-width: 600px;
+                                    max-width: calc(165px + (800 - 165) * ((100vw - 300px) / (1024 - 300)));
                                 }
                                 .quickediticon{
                                     display: none;
@@ -277,7 +291,7 @@ $yellow: #FDF7BF;
                                 height: 40px;
                                 margin: 0!important;
                                 @media screen and (max-width: 576px){
-                                    position: static;
+                                    top: -15px;
                                     width: 30px;
                                     height: 30px;
                                 }
