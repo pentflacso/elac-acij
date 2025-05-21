@@ -117,9 +117,7 @@ $yellow: #FDF7BF;
     }
 
     #page-content{   
-        @media screen and (max-width: 576px){
-            padding: 0 15px;
-        }     
+        padding: 0 15px;             
         ul.topics{
             max-width: 1500px!important;
             margin: 0 auto;
@@ -127,8 +125,11 @@ $yellow: #FDF7BF;
                 padding: 20px;
                 background-color: $gray-2;
                 margin: 30px 0 30px 0;
-                padding: 20px 15px 60px 15px;
+                padding: 20px 25px 60px 25px;
                 @include border-radius-1;
+                @media screen and (max-width: 576px){
+                    padding: 20px 15px 60px 15px;
+                }
                 .course-section-header{
                     .sectionname{
                         @include font-level-1;
