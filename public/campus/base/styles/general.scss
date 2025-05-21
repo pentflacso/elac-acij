@@ -261,24 +261,45 @@ $yellow: #FDF7BF;
                                 margin-bottom: 60px;
                             }
                             .wrapper-messages{
-                                background-color: $gray-2;
-                                padding: 20px;                
-                                margin: 30px 0 30px 0;
-                                padding: 25px 60px 25px 60px;
+                                background-color: $gray-2;                                       
+                                padding: 45px 65px;
                                 @include border-radius-1;
+                                margin-bottom: 60px;
                                 .message-row{ 
                                     width: 100%;
                                     display: flex;                                   
                                     .message-card{
                                         background-color: $white;
-                                        padding: 20px;
-                                        border-radius: 20px;
-                                        width: 48%;
+                                        padding: 30px 40px 30px 40px;                                        
+                                        width: 48%;                                        
                                         &.left{
                                             margin-right: auto;
+                                            border-radius: 0 40px 40px 40px;
                                         }
                                         &.right{
                                             margin-left: auto;
+                                            border-radius: 40px 0 40px 40px;
+                                        }
+                                        p{
+                                            @include font-level-3;
+                                            font-weight: 400;
+                                            line-height: 140%;
+                                            color: $black;
+                                            margin-bottom: 0;
+                                            &.name{
+                                                @include font-level-2;
+                                                font-weight: 700;
+                                                margin-bottom: 15px;
+                                                &.green{
+                                                    color: $apple-green;
+                                                }
+                                                &.orange{
+                                                    color: $orange;
+                                                }
+                                                &.violet{
+                                                    color: $violet;
+                                                }
+                                            }
                                         }
                                     }                                    
                                 }
