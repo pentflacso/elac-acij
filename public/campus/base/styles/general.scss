@@ -351,7 +351,7 @@ $yellow: #FDF7BF;
             overflow-x: hidden;
             .main-inner{
                 margin: 0;
-                padding: 0;
+                padding: 0 15px;  
                 max-width: none !important;
                 width: 100%;
                 #page-content{
@@ -388,27 +388,47 @@ $yellow: #FDF7BF;
                                 color: $black; 
                                 text-align: center;
                                 margin-bottom: 60px;
+                                @media screen and (max-width: 576px){
+                                    margin-bottom: 35px;
+                                }
                             }
                             .wrapper-messages{
                                 background-color: $gray-2;                                       
                                 padding: 45px 65px;
                                 @include border-radius-1;
                                 margin-bottom: 60px;
+                                @media screen and (max-width: 576px){
+                                    padding: 15px;
+                                    margin-bottom: 35px;
+                                }
                                 .message-row{ 
                                     width: 100%;
                                     display: flex;  
-                                    margin-bottom: 25px;                                 
+                                    margin-bottom: 25px;        
+                                    @media screen and (max-width: 576px){
+                                        margin-bottom: 15px;   
+                                    }                         
                                     .message-card{
                                         background-color: $white;
                                         padding: 30px 40px 30px 40px;                                        
-                                        width: 48%;                                        
+                                        width: 48%;     
+                                        @media screen and (max-width: 576px){
+                                            padding: 20px; 
+                                            width: 85%; 
+                                        }                                   
                                         &.left{
                                             margin-right: auto;
                                             border-radius: 0 40px 40px 40px;
+                                            @media screen and (max-width: 576px){
+                                                border-radius: 0 15px 15px 15px; 
+                                            } 
                                         }
                                         &.right{
                                             margin-left: auto;
                                             border-radius: 40px 0 40px 40px;
+                                            @media screen and (max-width: 576px){
+                                                border-radius: 15px 0 15px 15px; 
+                                            } 
                                         }
                                         p{
                                             @include font-level-3;
@@ -419,6 +439,9 @@ $yellow: #FDF7BF;
                                                 @include font-level-2;
                                                 font-weight: 700;
                                                 margin-bottom: 15px;
+                                                @media screen and (max-width: 576px){
+                                                    margin-bottom: 10px;
+                                                } 
                                                 &.green{
                                                     color: $apple-green;
                                                 }
@@ -443,6 +466,11 @@ $yellow: #FDF7BF;
                                             overflow: hidden;
                                             text-overflow: ellipsis;
                                             padding: 30px 40px 30px 105px;  
+                                            @media screen and (max-width: 576px){
+                                                background-position: 20px center;
+                                                background-size: 30px auto;
+                                                padding: 15px 15px 15px 60px;  
+                                            }
                                             a{
                                                 @include font-level-3;
                                                 font-weight: 400;
@@ -456,6 +484,9 @@ $yellow: #FDF7BF;
                                                 height: auto;
                                                 @include border-radius-2;
                                                 border: solid 2px #ededed;
+                                                @media screen and (max-width: 576px){
+                                                    border: solid 1px #ededed; 
+                                                } 
                                             }
                                         }
                                         /* &.audio{
