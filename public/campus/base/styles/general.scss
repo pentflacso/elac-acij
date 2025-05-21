@@ -166,6 +166,18 @@ $yellow: #FDF7BF;
     // Aplica estilos cuando se desactiva el modo edición.
     &:not(.editing){
     //&.editing{
+        #page-wrapper{
+            #page{
+                .main-inner{
+                    #page-header{
+                        margin-bottom: 60px;
+                    }
+                    .secondary-navigation{
+                        display: none!important;
+                    }
+                }
+            }
+        }
         #page-content{                 
             ul.topics{
                 .section{
@@ -252,7 +264,21 @@ $yellow: #FDF7BF;
                     div[role=main]{
                         max-width: 1500px;
                         margin: 0 auto;
-                        .page-whatsapp{
+                        .custom-btns{
+                            display: flex;   
+                            justify-content: center;      
+                            margin-top: 45px;                  
+                            a{
+                                @include button(secondary);
+                                &:first-child{
+                                @include button(primary);
+                                }
+                                &:nth-child(2){
+                                    margin-left: 15px;
+                                }
+                            }                         
+                        }
+                        .whatsapp-component{
                             h2{
                                 @include font-level-1;
                                 font-weight: 700;
@@ -267,7 +293,8 @@ $yellow: #FDF7BF;
                                 margin-bottom: 60px;
                                 .message-row{ 
                                     width: 100%;
-                                    display: flex;                                   
+                                    display: flex;  
+                                    margin-bottom: 25px;                                 
                                     .message-card{
                                         background-color: $white;
                                         padding: 30px 40px 30px 40px;                                        
@@ -299,8 +326,48 @@ $yellow: #FDF7BF;
                                                 &.violet{
                                                     color: $violet;
                                                 }
+                                                &.sky-blue{
+                                                    color: $sky-blue;
+                                                }
                                             }
                                         }
+                                        &.link{
+                                            background-image: url(/campus/base/img/link-icon.svg);
+                                            background-repeat: no-repeat;
+                                            background-position: 40px center;
+                                            background-size: 50px auto;
+                                            display: inline-block; 
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            padding: 30px 40px 30px 105px;  
+                                            a{
+                                                @include font-level-3;
+                                                font-weight: 400;
+                                                color: $black;
+                                            }
+                                        }
+                                        &.image{
+                                            padding: 15px;  
+                                            img{
+                                                width: 100%;
+                                                height: auto;
+                                                @include border-radius-2;
+                                                border: solid 2px #ededed;
+                                            }
+                                        }
+                                        /* &.audio{
+                                            .vjs-control-bar{                                                
+                                                .vjs-play-control{
+                                                    .vjs-icon-placeholder{
+                                                    }
+                                                }
+                                                .vjs-volume-panel{
+                                                    .vjs-icon-placeholder{
+                                                    }
+                                                }
+                                            }
+                                        } */
                                     }                                    
                                 }
                             }                            
