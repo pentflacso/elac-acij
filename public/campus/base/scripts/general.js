@@ -135,5 +135,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
 
+        //Selecciona el primer elemento de la lista de secciones que no sea la sección 0
+        const firstSection = document.querySelector('ul.topics li.course-section:not(#section-0)');
+
+        if (firstSection) {
+            //Collapse la sección 0 - muestra contenido
+            const contentDiv = firstSection.querySelector('.course-content-item-content');
+            contentDiv.classList.add('show');
+
+            const toggleLink = firstSection.querySelector('a.icons-collapse-expand');
+            if(toggleLink) {
+                // Boton collapse
+                if (toggleLink.classList.contains('collapsed')) {
+                    toggleLink.classList.remove('collapsed');
+                }
+
+                toggleLink.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        let nextSiblings = false;
+        // Obtener todos los <li.course-section>
+        const allSections = document.querySelectorAll('ul.topics li.course-section');
+        
+        // Iterar sobre cada sección
+        allSections.forEach(section => {
+            // 1. Si es la primera sección, no hacemos nada
+            if (section === firstSection) {
+                nextSiblings = true; // A partir de aquí procesamos los siguientes
+                return;
+            }
+
+            if (nextSiblings) {
+                // 1. Quitar clase "show" si existe
+                const content = section.querySelector('.course-content-item-content');
+                if (content) {
+                    content.classList.remove('show');
+                }
+
+                // 2 y 3. Asegurar que tenga "collapsed" y aria-expanded="false"
+                const link = section.querySelector('a.icons-collapse-expand');
+                if (link) {
+                    // Boton collapse
+                    if (!link.classList.contains('collapsed')) {
+                        link.classList.add('collapsed');
+                    }
+                    link.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+        });
+
     }
 });
