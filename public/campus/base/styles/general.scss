@@ -70,12 +70,20 @@ $yellow: #FDF7BF;
     padding: 10px 35px;
     border-radius: 50px;
     transition: all .1s ease-out;
-
+    transform: scale(1);
+    &:focus{
+        box-shadow: none;
+    }
+    &:hover{
+        background-color: $black;            
+    } 
+    &:active{
+        transform: scale(.95);  
+    }
     @if $variant == primary {
         background-color: $aqua-green;
-        color: white;
-    }
-    
+        color: white;             
+    }    
     @if $variant == secondary {
         background-color: $white;
         color: $aqua-green;
@@ -118,10 +126,29 @@ $yellow: #FDF7BF;
     }
     #page-header{
         max-width: none !important;
-        height: 200px;
+        height: 180px;
         width: 100%;
         background-color: $aqua-green;
         color: $white;
+        .page-context-header{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: 0 auto;
+            width: 600px;
+            background-color: red;            
+            background-image: url(/campus/base/img/course-brand.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+            .page-header-headings{
+                .h2{
+                    display: none;
+                }
+            }
+        }
     }
 
     #page-content{   
@@ -218,7 +245,7 @@ $yellow: #FDF7BF;
                         a{
                             width: fit-content;
                             @include button(secondary);
-                            &:first-child{
+                            &:last-child{
                             @include button(primary);
                             }
                             &:nth-child(2){
@@ -412,9 +439,9 @@ $yellow: #FDF7BF;
                                         background-color: $white;
                                         padding: 30px 40px 30px 40px;                                        
                                         width: 48%;     
-                                        @media screen and (max-width: 576px){
+                                        @media screen and (max-width: 1024px){
                                             padding: 20px; 
-                                            width: 85%; 
+                                            width: 80%; 
                                         }                                   
                                         &.left{
                                             margin-right: auto;
