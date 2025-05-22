@@ -87,6 +87,9 @@ $yellow: #FDF7BF;
     @if $variant == secondary {
         background-color: $white;
         color: $aqua-green;
+        &:hover{
+            color: white;             
+        } 
     }
 }
 
@@ -127,10 +130,13 @@ $yellow: #FDF7BF;
     #page-header{
         position: relative;
         max-width: none !important;
-        height: 180px;
+        height: 200px;
         width: 100%;
         background-color: $aqua-green;
         color: $white;
+        @media screen and (max-width: 576px){
+            height: calc(110px + (150 - 110) * ((100vw - 300px) / (576 - 300)));
+        }
         .page-context-header{
             position: absolute;
             left: 0;
@@ -143,6 +149,9 @@ $yellow: #FDF7BF;
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100% auto;
+            @media screen and (max-width: 576px){
+                width: calc(255px + (400  - 255) * ((100vw - 300px) / (576 - 300)));
+            }
             .page-header-headings{
                 .h2{
                     display: none;
@@ -163,6 +172,7 @@ $yellow: #FDF7BF;
                 padding: 20px 25px 60px 25px;
                 @include border-radius-1;
                 @media screen and (max-width: 576px){
+                    margin: 15px 0 15px 0;
                     padding: 25px 20px 25px 20px;
                 }
                 .course-section-header{
@@ -269,6 +279,9 @@ $yellow: #FDF7BF;
                 .main-inner{
                     #page-header{
                         margin-bottom: 60px;
+                        @media screen and (max-width: 576px){
+                            width: 30px;
+                        }
                     }
                     .secondary-navigation{
                         display: none!important;
