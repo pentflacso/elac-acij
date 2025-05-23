@@ -590,18 +590,6 @@ $yellow: #FDF7BF;
                                                 } 
                                             }
                                         }
-                                        /* &.audio{
-                                            .vjs-control-bar{                                                
-                                                .vjs-play-control{
-                                                    .vjs-icon-placeholder{
-                                                    }
-                                                }
-                                                .vjs-volume-panel{
-                                                    .vjs-icon-placeholder{
-                                                    }
-                                                }
-                                            }
-                                        } */
                                     }                                    
                                 }
                             }                            
@@ -636,9 +624,32 @@ $yellow: #FDF7BF;
 }
 
 
+/* ------------------------------------------------------------ */
 
 
-
+/* ESTILOS FOOTER */
+#page{
+    #page-footer{
+        padding-top: 150px;
+        width: 95%!important;
+        max-width: 95%!important;
+        margin-top: 80px;
+        border-radius: 0!important;        
+        border-top: 2px solid #d0d0d0;
+        background-image: url(/campus/base/img/brand-footer.jpg);
+        background-repeat: no-repeat;
+        background-position: 10px 25px;
+        background-size: 220px auto;
+        @media screen and (max-width: 768px){
+            padding-top: 100px;
+            width: 100%!important;
+            max-width: 100%!important; 
+            margin-top: 40px;
+            background-position: 20px 15px;
+            background-size: 160px auto;
+        }
+    }
+}
 
 
 
