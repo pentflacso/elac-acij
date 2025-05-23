@@ -641,12 +641,15 @@ $yellow: #FDF7BF;
         background-position: 10px 25px;
         background-size: 220px auto;
         @media screen and (max-width: 768px){
-            padding-top: 100px;
+            padding-top: 95px;
             width: 100%!important;
             max-width: 100%!important; 
             margin-top: 40px;
             background-position: 20px 15px;
             background-size: 160px auto;
+        }
+        .btn-footer-popover, .footer-content-popover{
+            display: none;
         }
     }
 }
