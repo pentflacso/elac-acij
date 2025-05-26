@@ -636,10 +636,12 @@ $yellow: #FDF7BF;
         margin-top: 80px;
         border-radius: 0!important;        
         border-top: 2px solid #d0d0d0;
-        background-image: url(/campus/base/img/brand-footer.jpg);
-        background-repeat: no-repeat;
-        background-position: 10px 25px;
-        background-size: 220px auto;
+        background-image: 
+        url(/campus/base/img/brand-footer.jpg),
+        url(/campus/base/img/logo_final_conjunto_positivo_footer.jpg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 10px 25px, right 25px;
+        background-size: 220px auto, 180px auto;
         @media screen and (max-width: 768px){
             padding-top: 95px;
             width: 100%!important;
