@@ -418,17 +418,17 @@ $yellow: #FDF7BF;
                             content: "4";
                         }
                     }
-                    &:nth-of-type(3){
+                    &:nth-of-type(9){
                         &::before {
                             content: "3";
                         }
                     }
-                    &:nth-of-type(4){
+                    &:nth-of-type(16){
                         &::before {
                             content: "2";
                         }
                     }
-                    &:nth-of-type(5){
+                    &:nth-of-type(27){
                         &::before {
                             content: "1";
                         }
@@ -664,8 +664,8 @@ $yellow: #FDF7BF;
             width: 100%!important;
             max-width: 100%!important; 
             margin-top: 40px;
-            background-position: 20px 15px;
-            background-size: 160px auto;
+            background-position: 20px 15px, right 15px top 18px;
+            background-size: 140px auto, 115px auto;
         }
         .btn-footer-popover, .footer-content-popover{
             display: none;
