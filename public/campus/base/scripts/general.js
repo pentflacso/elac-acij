@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
         allSections.forEach(section => {
             // Si contiene un .separate, marcar la sección como separador
             if (section.querySelector('.separate')) {
-                section.classList.add('section-module');
+                section.classList.add('section-divider');
             }
 
             const content = section.querySelector('.course-content-item-content');
