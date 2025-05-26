@@ -499,17 +499,33 @@ $yellow: #FDF7BF;
                                 }
                             }                         
                         }
-                        .whatsapp-component{
-                            h2{
+                        .activity-heading{
+                            text-align: center;
+                            margin-bottom: 65px;
+                            @media screen and (max-width: 576px){
+                                margin-bottom: 45px;
+                            }
+                            h3, .title{
                                 @include font-level-1;
                                 font-weight: 700;
-                                color: $black; 
-                                text-align: center;
-                                margin-bottom: 60px;
+                                color: $black;                                 
+                                margin-bottom: 40px;
                                 @media screen and (max-width: 576px){
-                                    margin-bottom: 35px;
+                                    margin-bottom: 20px;
                                 }
                             }
+                            p{
+                                @include font-level-3;
+                                font-weight: 400;
+                                color: $black;
+                                max-width: 900px;
+                                margin: 0 auto 25px auto;
+                                @media screen and (max-width: 576px){
+                                    margin: 0 auto 15px auto;
+                                }
+                            }
+                        }
+                        .whatsapp-component{                            
                             .wrapper-messages{
                                 background-color: $gray-2;                                       
                                 padding: 45px 65px;
@@ -657,7 +673,7 @@ $yellow: #FDF7BF;
         url(/campus/base/img/brand-footer.jpg),
         url(/campus/base/img/logo_final_conjunto_positivo_footer.jpg);
         background-repeat: no-repeat, no-repeat;
-        background-position: 10px 25px, right 25px;
+        background-position: 10px 25px, right 28px;
         background-size: 220px auto, 180px auto;
         @media screen and (max-width: 768px){
             padding-top: 95px;
