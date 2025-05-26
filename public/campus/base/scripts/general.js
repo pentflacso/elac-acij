@@ -135,56 +135,82 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
 
-        //Selecciona el primer elemento de la lista de secciones que no sea la sección 0
-        const firstSection = document.querySelector('ul.topics li.course-section:not(#section-0)');
+        /**
+         * Función para colapsar todas las secciones del curso excepto la primera válida
+         */
 
-        if (firstSection) {
-            //Collapse la sección 0 - muestra contenido
-            const contentDiv = firstSection.querySelector('.course-content-item-content');
-            contentDiv.classList.add('show');
+        const allSections = document.querySelectorAll('ul.topics li.course-section');
 
-            const toggleLink = firstSection.querySelector('a.icons-collapse-expand');
-            if(toggleLink) {
-                // Boton collapse
-                if (toggleLink.classList.contains('collapsed')) {
-                    toggleLink.classList.remove('collapsed');
-                }
+        let firstValidSection = null;
 
-                toggleLink.setAttribute('aria-expanded', 'true');
+        // Encontrar la primera sección válida que no sea section-0 ni tenga .separate
+        for (const section of allSections) {
+            if (section.id !== 'section-0' && !section.querySelector('.separate')) {
+                firstValidSection = section;
+                break;
             }
         }
 
-        let nextSiblings = false;
-        // Obtener todos los <li.course-section>
-        const allSections = document.querySelectorAll('ul.topics li.course-section');
-        
-        // Iterar sobre cada sección
+        // Iterar sobre todas las secciones
         allSections.forEach(section => {
-            // 1. Si es la primera sección, no hacemos nada
-            if (section === firstSection) {
-                nextSiblings = true; // A partir de aquí procesamos los siguientes
-                return;
+            // Si contiene un .separate, marcar la sección como separador
+            if (section.querySelector('.separate')) {
+                section.classList.add('section-module');
             }
 
-            if (nextSiblings) {
-                // 1. Quitar clase "show" si existe
-                const content = section.querySelector('.course-content-item-content');
-                if (content) {
-                    content.classList.remove('show');
-                }
+            const content = section.querySelector('.course-content-item-content');
+            const link = section.querySelector('a.icons-collapse-expand');
 
-                // 2 y 3. Asegurar que tenga "collapsed" y aria-expanded="false"
-                const link = section.querySelector('a.icons-collapse-expand');
+            if (section === firstValidSection) {
+                // Expandir la primera sección válida
+                if (content) content.classList.add('show');
+
                 if (link) {
-                    // Boton collapse
+                    link.classList.remove('collapsed');
+                    link.setAttribute('aria-expanded', 'true');
+                }
+            } else {
+                // Colapsar todas las demás
+                if (content) content.classList.remove('show');
+
+                if (link) {
                     if (!link.classList.contains('collapsed')) {
                         link.classList.add('collapsed');
                     }
+
                     link.setAttribute('aria-expanded', 'false');
                 }
             }
-
         });
 
+    }else{
+        const breadcrumb = document.querySelector('.breadcrumb');
+
+        if (breadcrumb) {
+            const firstBreadcrumbItem = breadcrumb.querySelector('li.breadcrumb-item a');
+
+            if (firstBreadcrumbItem) {
+                const href = firstBreadcrumbItem.getAttribute('href');
+                const title = firstBreadcrumbItem.getAttribute('title');
+
+                // 2. Crear el nuevo elemento <div class="back"><a ...>← Volver</a></div>
+                const backDiv = document.createElement('div');
+                backDiv.className = 'back';
+
+                const backLink = document.createElement('a');
+                backLink.href = href;
+                backLink.title = title;
+                backLink.textContent = '← Volver';
+
+                backDiv.appendChild(backLink);
+
+                // 3. Insertar después del <nav class="navbar">
+                const navbar = document.querySelector('nav.navbar');
+
+                if (navbar && navbar.parentNode) {
+                    navbar.parentNode.insertBefore(backDiv, navbar.nextSibling);
+                }
+            }
+        }
     }
 });
