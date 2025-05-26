@@ -378,62 +378,79 @@ $yellow: #FDF7BF;
                 #section-0{ 
                     display: none;
                 }
-                // Separadores 
-                #section-1{                
-                    &.section{
-                        position: relative;
-                        background-color: $white;
-                        margin: 100px 0;
-                        padding: 95px 0 20px 0;
-                        border-radius: 0;
-                        border-bottom: 2px solid #d0d0d0;
+                // Separadores                                
+                li.section.section-divider{
+                    position: relative;
+                    background-color: $white;
+                    margin: 100px 0;
+                    padding: 95px 0 20px 0;
+                    border-radius: 0;
+                    border-bottom: 2px solid #d0d0d0;
+                    @media screen and (max-width: 576px){
+                        margin: 50px 0;
+                        padding: 60px 0 15px 0;
+                    }
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;                          
+                        width: 70px;
+                        height: 70px;                            
+                        font-family: "Sen", sans-serif;
+                        font-weight: 800;
+                        color: $aqua-green;
+                        font-size: 42px;
+                        border-radius: 50%;
+                        background-color: $gray-2;
                         @media screen and (max-width: 576px){
-                            margin: 50px 0;
-                            padding: 60px 0 15px 0;
-                        }
-                        &::before {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            margin: 0 auto;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            content: "2";                            
-                            width: 70px;
-                            height: 70px;                            
-                            font-family: "Sen", sans-serif;
-                            font-weight: 800;
-                            color: $aqua-green;
-                            font-size: 42px;
-                            border-radius: 50%;
-                            background-color: $gray-2;
-                            @media screen and (max-width: 576px){
-                                width: 50px;
-                                height: 50px;
-                                font-size: 30px;
-                            }
-                        }
-                        .course-section-header{
-                            .icons-collapse-expand{
-                                display: none;
-                            }
-                            div{
-                                padding: 0;
-                                h3{
-                                    font-family: "Sen", sans-serif;
-                                    font-weight: 800;
-                                    color: $aqua-green;
-                                    text-transform: uppercase;
-                                }
-                            }
-                        }
-                        .course-content-item-content{
-                            display: none;
+                            width: 50px;
+                            height: 50px;
+                            font-size: 30px;
                         }
                     }
-                }
+                    &:nth-of-type(1){
+                        &::before {
+                            content: "1";
+                        }
+                    }
+                    &:nth-of-type(2){
+                        &::before {
+                            content: "2";
+                        }
+                    }
+                    &:nth-of-type(3){
+                        &::before {
+                            content: "3";
+                        }
+                    }
+                    &:nth-of-type(4){
+                        &::before {
+                            content: "4";
+                        }
+                    }
+                    .course-section-header{
+                        .icons-collapse-expand{
+                            display: none;
+                        }
+                        div{
+                            padding: 0;
+                            h3{
+                                font-family: "Sen", sans-serif;
+                                font-weight: 800;
+                                color: $aqua-green;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                    .course-content-item-content{
+                        display: none;
+                    }
+                }                
             }
         } 
     }
