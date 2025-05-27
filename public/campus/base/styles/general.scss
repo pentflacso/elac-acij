@@ -668,7 +668,7 @@ $yellow: #FDF7BF;
                                     background-size: 160px auto;
                                     padding: 10px 90px 50px 90px;
                                     @media screen and (max-width: 1200px){
-                                        padding: 10px 15px 20px 15px;
+                                        padding: 10px 15px;
                                     }
                                     @media screen and (max-width: 768px){
                                         padding-top: 80px;
@@ -683,8 +683,8 @@ $yellow: #FDF7BF;
                                         padding: 0 65px;
                                         margin-bottom: 25px;
                                         @media screen and (max-width: 768px){
-                                            line-height: 140%;
-                                            padding: 0 40px;
+                                            line-height: 130%;
+                                            padding: 0 5px;
                                             margin-bottom: 20px;
                                         }
                                         strong{
@@ -708,12 +708,12 @@ $yellow: #FDF7BF;
                                             background-repeat: no-repeat;
                                             background-position: left center;
                                             background-size: 12px auto;
-                                            padding-left: 20px;
+                                            padding: 0 0 0 20px;
                                             @media screen and (max-width: 768px){
                                                 top: 30px;
                                                 left: 22px;
                                                 background-size: 8px auto;
-                                                padding-left: 15px;
+                                                padding: 0 0 0 15px;
                                             }
                                         }
                                         &.email{
