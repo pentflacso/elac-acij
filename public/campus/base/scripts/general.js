@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const divider_number = [...document.querySelectorAll('li.section-divider')].reverse();
 
             divider_number.forEach((el, index) => {
-                el.style.setProperty('--count', index + 1);
+                el.style.setProperty('--count', `'${index + 1}'`);
             });
         });
 
