@@ -673,7 +673,7 @@ $yellow: #FDF7BF;
                                     @media screen and (max-width: 768px){
                                         padding-top: 80px;
                                         background-size: 105px auto;
-                                        background-position: right 25px top 35px;
+                                        background-position: right 25px top 33px;
                                     }
                                     p, a{
                                         @include font-level-3;
@@ -694,6 +694,9 @@ $yellow: #FDF7BF;
                                             font-weight: 800;
                                             margin-bottom: 30px;
                                             padding: 0 0 0 5px;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
                                             @media screen and (max-width: 768px){
                                                 margin-bottom: 20px;
                                                 padding: 0 0 0 2px;
@@ -724,6 +727,9 @@ $yellow: #FDF7BF;
                                             background-position: left center;
                                             background-size: 50px auto;
                                             padding: 10px 0 10px 65px;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
                                             @media screen and (max-width: 768px){
                                                 background-size: 30px auto;
                                                 padding: 10px 0 10px 40px;
