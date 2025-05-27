@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //SI estamos en la portada del curso
     if (body.classList.contains('pagelayout-course')) {
+        /*
         if (window.innerWidth < 1200) {
 
             let regionMainBox = document.getElementById('region-main-box');
@@ -134,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
         }
+        */    
 
         /**
          * Función para colapsar todas las secciones del curso excepto la primera válida
@@ -181,6 +183,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     link.setAttribute('aria-expanded', 'false');
                 }
             }
+
+            //Numeradores para los separadores
+            const divider_number = [...document.querySelectorAll('li.section-divider')].reverse();
+
+            divider_number.forEach((el, index) => {
+                el.style.setProperty('--count', index + 1);
+            });
         });
 
     }else{
