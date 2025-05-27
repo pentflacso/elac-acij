@@ -24,7 +24,7 @@ body{
 
 // Theme Colors
 $black: #464646;
-$gray-1: #AAAAAA;
+$gray-1: #cccccc;
 $gray-2: #F3F3F3;
 $white: #ffffff;
 $violet: #A36BCE;
@@ -107,6 +107,13 @@ $yellow: #FDF7BF;
     border-radius: 30px;
     @media screen and (max-width: 576px){
         border-radius: 15px;
+    }
+}
+
+@mixin border-radius-3 {
+    border-radius: 20px;
+    @media screen and (max-width: 576px){
+        border-radius: 10px;
     }
 }
 
@@ -499,9 +506,11 @@ $yellow: #FDF7BF;
                                 }
                             }                         
                         }
+                        // Activity Heading 
                         .activity-heading{
-                            text-align: center;
-                            margin-bottom: 65px;
+                            max-width: 800px;
+                            text-align: center;                            
+                            margin: 0 auto 65px auto;
                             @media screen and (max-width: 576px){
                                 margin-bottom: 45px;
                             }
@@ -517,14 +526,14 @@ $yellow: #FDF7BF;
                             p{
                                 @include font-level-3;
                                 font-weight: 400;
-                                color: $black;
-                                max-width: 900px;
-                                margin: 0 auto 25px auto;
+                                color: $black;                              
+                                margin-bottom: 25px;
                                 @media screen and (max-width: 576px){
-                                    margin: 0 auto 15px auto;
+                                    margin-bottom: 15px;
                                 }
                             }
                         }
+                        // WhatsApp Component
                         .whatsapp-component{                            
                             .wrapper-messages{
                                 background-color: $gray-2;                                       
@@ -627,6 +636,110 @@ $yellow: #FDF7BF;
                                 }
                             }                            
                         } 
+                        // Mail Component
+                        .mail-component{
+                            padding: 60px;
+                            background-color: $gray-1;
+                            @include border-radius-3;                            
+                            @media screen and (max-width: 768px){
+                                padding: 15px;
+                            }
+                            .mail-wrapper{
+                                background-color: #dde1e8;
+                                background-image: url(/campus/base/img/mail_bg_1.jpg), url(/campus/base/img/mail_bg_2.jpg);
+                                background-repeat: no-repeat, no-repeat;
+                                background-position: 30px 20px, right 30px top 22px;
+                                background-size: 360px auto, 160px auto;
+                                padding-top: 60px;
+                                @include border-radius-2;
+                                overflow: hidden;
+                                @media screen and (max-width: 768px){
+                                    padding-top: 40px;
+                                    background-image: url(/campus/base/img/mail_bg_1.jpg);
+                                    background-position: 20px 14px;                                 
+                                    background-size: 250px auto;
+                                }
+                                .mail-body{
+                                    position: relative;
+                                    background-color: $white;
+                                    background-image: url(/campus/base/img/mail_body_bg.jpg);
+                                    background-repeat: no-repeat;
+                                    background-position: right 30px top 33px;
+                                    background-size: 160px auto;
+                                    padding: 10px 90px 50px 90px;
+                                    @media screen and (max-width: 1200px){
+                                        padding: 10px 15px 20px 15px;
+                                    }
+                                    @media screen and (max-width: 768px){
+                                        padding-top: 80px;
+                                        background-size: 105px auto;
+                                        background-position: right 25px top 35px;
+                                    }
+                                    p, a{
+                                        @include font-level-3;
+                                        font-weight: 400;
+                                        line-height: 150%;
+                                        color: $black;
+                                        padding: 0 65px;
+                                        margin-bottom: 25px;
+                                        @media screen and (max-width: 768px){
+                                            line-height: 140%;
+                                            padding: 0 40px;
+                                            margin-bottom: 20px;
+                                        }
+                                        strong{
+                                            font-weight: 800;
+                                        }
+                                        &.subject{
+                                            font-weight: 800;
+                                            margin-bottom: 30px;
+                                            padding: 0 0 0 5px;
+                                            @media screen and (max-width: 768px){
+                                                margin-bottom: 20px;
+                                                padding: 0 0 0 2px;
+                                            }
+                                        }
+                                        &.date{
+                                            position: absolute;
+                                            top: 85px;
+                                            right: 160px;
+                                            @include font-level-4;
+                                            background-image: url(/campus/base/img/rayo_icon_date.jpg);
+                                            background-repeat: no-repeat;
+                                            background-position: left center;
+                                            background-size: 12px auto;
+                                            padding-left: 20px;
+                                            @media screen and (max-width: 768px){
+                                                top: 30px;
+                                                left: 22px;
+                                                background-size: 8px auto;
+                                                padding-left: 15px;
+                                            }
+                                        }
+                                        &.email{
+                                            font-weight: 800;
+                                            margin-bottom: 30px;
+                                            background-image: url(/campus/base/img/profile_email_bg.jpg);
+                                            background-repeat: no-repeat;
+                                            background-position: left center;
+                                            background-size: 50px auto;
+                                            padding: 10px 0 10px 65px;
+                                            @media screen and (max-width: 768px){
+                                                background-size: 30px auto;
+                                                padding: 10px 0 10px 40px;
+                                                margin-bottom: 20px;
+                                            }
+                                        }
+                                    }    
+                                    a{
+                                        text-decoration: underline;
+                                        font-weight: 700;
+                                        color: $aqua-green;
+                                        padding: 0;
+                                    }                                
+                                }
+                            }
+                        }
                     }
                 }
             }
