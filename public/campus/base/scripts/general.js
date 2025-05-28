@@ -221,5 +221,54 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         }
+
+        /**
+         * Funciones para manejar la base de libreta
+         */
+
+        const base_libreta = document.querySelector(".base-libreta");
+
+        if(base_libreta){
+            let breadcrumbUrl = '#';
+            let breadcrumbTitle = '';
+
+            if (breadcrumb) {
+                const firstItem = breadcrumb.querySelector('li.breadcrumb-item a');
+
+                if (firstItem) {
+                    breadcrumbUrl = firstItem.getAttribute('href');
+                    breadcrumbTitle = firstItem.getAttribute('title') || firstItem.textContent.trim();
+                }
+            }
+
+            // 2. Verifica si existe el contenedor del sticky footer
+            const stickyFooter = document.querySelector('#page-mod-data-view #sticky-footer');
+
+            if (stickyFooter) {
+            const navItems = stickyFooter.querySelectorAll('div.navitem');
+
+            navItems.forEach(item => {
+                // Asegura que el div tenga solo la clase "navitem"
+                if (item.classList.length === 1 && item.classList.contains('navitem')) {
+
+                // Crear el nuevo enlace "Avanzar"
+                const avanzarLink = document.createElement('a');
+                avanzarLink.href = breadcrumbUrl;
+                avanzarLink.title = breadcrumbTitle;
+                avanzarLink.textContent = 'Avanzar';
+                avanzarLink.className = 'btn btn-secondary';
+
+                // Agregar el nuevo enlace al final del navitem
+                item.appendChild(avanzarLink);
+
+                // Buscar un <a> con clase "btn-primary" y cambiar su texto
+                const btnPrimary = item.querySelector('a.btn-primary');
+                if (btnPrimary) {
+                    btnPrimary.textContent = 'Agregar nota';
+                }
+                }
+            });
+            }
+        }
     }
 });
