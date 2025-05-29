@@ -465,7 +465,7 @@ $yellow: #FDF7BF;
             overflow-x: hidden;
             .main-inner{
                 margin: 0;
-                padding: 0 15px;  
+                padding: 0;  
                 max-width: none !important;
                 width: 100%;
                 .back{
@@ -489,6 +489,7 @@ $yellow: #FDF7BF;
                     }
                 }
                 #page-content{
+                    padding: 0 15px;
                     div[role=main]{
                         max-width: 1500px;
                         margin: 0 auto;
