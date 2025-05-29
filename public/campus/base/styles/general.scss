@@ -891,6 +891,28 @@ $yellow: #FDF7BF;
                                     .tertiary-navigation{
                                         display: none!important;
                                     }
+                                    h2{                                                    
+                                        @include font-level-1;
+                                        font-weight: 700;
+                                        color: $black;        
+                                        text-align: center; 
+                                        width: 100%;
+                                        max-width: 800px;                         
+                                        margin: 0 auto 30px auto;
+                                        @media screen and (max-width: 576px){
+                                            margin-bottom: 20px;
+                                        }                                                    
+                                    }
+                                    .d-inline-flex{
+                                        width: 100%;
+                                        .mod-data-input{
+                                            width: 100%;
+                                            margin-bottom: 30px;
+                                            @media screen and (max-width: 576px){
+                                                margin-bottom: 20px;
+                                            } 
+                                        }
+                                    }                                    
                                     .datapreferences{
                                         margin-top: 0!important;
                                         form{
@@ -901,7 +923,7 @@ $yellow: #FDF7BF;
                                                 display: flex;
                                                 flex-wrap: wrap;
                                                 justify-content: space-between;  
-                                                padding-top: 0!important;                                             
+                                                padding-top: 0!important;                            
                                                 .post-it{
                                                     display: flex;
                                                     flex-wrap: wrap;
@@ -945,7 +967,7 @@ $yellow: #FDF7BF;
                                                                 background-color: $white;
                                                             }
                                                         }
-                                                    }
+                                                    }                                                    
                                                 }
                                             }
                                         }
