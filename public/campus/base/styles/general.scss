@@ -19,6 +19,7 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: "Nunito Sans", sans-serif;
+    overscroll-behavior: none;
 }
 
 
@@ -386,7 +387,38 @@ $yellow: #FDF7BF;
                         .changenumsections{
                             display: none!important;
                         }
-                    }               
+                    }
+                    // Estilo última caja (linea de tiempo)
+                    &:last-child{
+                        background-color: $white;                        
+                        margin: 80px 0 0 0;  
+                        padding: 0;                      
+                        @media screen and (max-width: 576px){
+                            margin: 50px 0 0 0;
+                        }
+                        .course-section-header{
+                            background-image: url(/campus/base/img/linea-tiempo-icon.svg);
+                            background-repeat: no-repeat;
+                            background-position: center top;
+                            background-size: 100px auto;
+                            padding: 120px 0 0 0;
+                            @media screen and (max-width: 576px){
+                                background-size: 75px auto;
+                                padding: 90px 0 0 0;
+                            }
+                            div{
+                                padding: 0;
+                            }
+                            h3{
+                                @include font-level-2;
+                                color: $black;
+                                max-width: 100%;
+                            }                           
+                        }
+                        .course-content-item-content{
+                            display: none;
+                        }
+                    }              
                 }
                 // Oculta la caja General
                 #section-0{ 
