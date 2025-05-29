@@ -411,8 +411,10 @@ $yellow: #FDF7BF;
                             }
                             h3{
                                 @include font-level-2;
-                                color: $black;
-                                max-width: 100%;
+                                color: $black;                               
+                                @media screen and (max-width: 576px){
+                                    max-width: 100%;
+                                }
                             }      
                             .icons-collapse-expand{
                                 display: none;
