@@ -535,7 +535,7 @@ $yellow: #FDF7BF;
                             text-align: center;                            
                             margin: 0 auto 65px auto;
                             @media screen and (max-width: 576px){
-                                margin-bottom: 40px;
+                                margin-bottom: 35px;
                             }
                             h3, .title{
                                 @include font-level-1;
@@ -802,9 +802,13 @@ $yellow: #FDF7BF;
                             height: auto;
                             background-color: transparent!important;
                             border: none!important;
+                            @media screen and (max-width: 576px){
+                                flex-wrap: wrap;
+                                gap: 15px;
+                            }
                             .navitem{
                                 display: flex;
-                                gap: 10px;
+                                gap: 15px;
                                 margin: 0!important;                                
                                 @media screen and (max-width: 576px){
                                     flex-wrap: wrap;
@@ -813,9 +817,11 @@ $yellow: #FDF7BF;
                             }
                             .btn-primary{
                                 @include button(primary);
+                                margin: 0 !important;
                             }
                             .btn-secondary{
-                                @include button(secondary);                                    
+                                @include button(secondary);     
+                                margin: 0 !important;                               
                             }
                         }
                     }
