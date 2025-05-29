@@ -484,7 +484,7 @@ $yellow: #FDF7BF;
                             a{
                                 width: fit-content;
                                 @include button(secondary);
-                                &:first-child{
+                                &:last-child{
                                 @include button(primary);
                                 }
                                 &:nth-child(2){
