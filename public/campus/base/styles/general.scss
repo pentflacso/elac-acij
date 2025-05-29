@@ -229,6 +229,7 @@ $yellow: #FDF7BF;
                             margin: 32px 0 10px 0;
                         }
                         .video-wrapper{
+                            display: flex;
                             width: 48.5%;
                             overflow: hidden;
                             @include border-radius-2;                            
@@ -236,13 +237,10 @@ $yellow: #FDF7BF;
                                 width: 90%;
                                 margin: 0 auto 20px auto;
                             }
-                            .mediaplugin{
+                            video{
                                 width: 100%;                                
                                 height: auto;
                                 margin: 0;
-                                div{
-                                    max-width: 100%!important;
-                                }
                             }                            
                         }
                     }
