@@ -68,17 +68,19 @@ $yellow: #FDF7BF;
     @include font-level-3;  
     font-weight: 700;
     text-decoration: none;
-    padding: 10px 35px;
+    padding: 12px 35px;
     border-radius: 50px;
     transition: all .1s ease-out;
-    transform: scale(1);
-    outline: none;
+    transform: scale(1);   
     border: none;
     &:focus{
         box-shadow: none;
+        outline: 3px solid $aqua-green;
+        outline-offset: 4px;
     }
     &:hover{
-        background-color: $black;            
+        background-color: $black;   
+        outline: 2px solid transparent; 
     } 
     &:active{
         transform: scale(.95);  
@@ -86,12 +88,16 @@ $yellow: #FDF7BF;
     @if $variant == primary {
         background-color: $aqua-green;
         color: white;             
+        outline: 2px solid transparent;
+        outline-offset: 0px;
     }    
     @if $variant == secondary {
         background-color: $white;
         color: $aqua-green;
+        outline: 2px solid $gray-2;
+        outline-offset: 0px;
         &:hover{
-            color: white;             
+            color: white;                       
         } 
     }
 }
@@ -254,7 +260,8 @@ $yellow: #FDF7BF;
                     .custom-btns{
                         display: flex;   
                         justify-content: center;      
-                        margin-top: 45px;       
+                        margin-top: 45px;  
+                        padding: 10px 0;     
                         @media screen and (max-width: 576px){                            
                             flex-direction: column;
                             align-items: center;
@@ -263,7 +270,7 @@ $yellow: #FDF7BF;
                         a{
                             width: fit-content;
                             @include button(secondary);
-                            &:last-child{
+                            &:first-child{
                             @include button(primary);
                             }
                             &:nth-child(2){
@@ -475,7 +482,8 @@ $yellow: #FDF7BF;
                         .custom-btns{
                             display: flex;   
                             justify-content: center;      
-                            margin-top: 45px;       
+                            margin-top: 45px;    
+                            padding: 10px 0;    
                             @media screen and (max-width: 576px){                            
                                 flex-direction: column;
                                 align-items: center;
@@ -484,7 +492,7 @@ $yellow: #FDF7BF;
                             a{
                                 width: fit-content;
                                 @include button(secondary);
-                                &:last-child{
+                                &:first-child{
                                 @include button(primary);
                                 }
                                 &:nth-child(2){
@@ -769,7 +777,13 @@ $yellow: #FDF7BF;
                             background-color: transparent!important;
                             border: none!important;
                             .navitem{
-                                margin: 0!important;
+                                display: flex;
+                                gap: 10px;
+                                margin: 0!important;                                
+                                @media screen and (max-width: 576px){
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                }
                                 .btn-primary{
                                     @include button(primary);
                                 }
@@ -799,11 +813,59 @@ $yellow: #FDF7BF;
                         }
                     }
                     .activity-header{
-                        display: none;
+                        background-color: transparent;
+                        display: block;
+                        margin: 0 0 60px 0!important;    
+                        padding-top: 60px;            
+                        @media screen and (max-width: 576px){
+                            padding-top: 45px;  
+                            margin-bottom: 35px!important;
+                        }                
+                        .activity-description{  
+                            padding: 0!important;                                  
+                            h2{
+                                @include font-level-1;
+                                font-weight: 700;
+                                color: $black;        
+                                text-align: center; 
+                                width: 100%;
+                                max-width: 800px;                         
+                                margin: 0 auto 30px auto;
+                                @media screen and (max-width: 576px){
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            p{
+                                @include font-level-3;
+                                font-weight: 400;
+                                color: $black;   
+                                text-align: center; 
+                                width: 100%;
+                                max-width: 800px;                           
+                                margin: 0 auto 50px auto;
+                                @media screen and (max-width: 576px){
+                                    margin-bottom: 35px;
+                                }
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }                                        
+                            }
+                        }
                     }
                 }
             }
-        }   
+        }
+        &:not(.base-libreta){   
+            #page{
+                .main-inner{
+                    #page-content{
+                        .activity-header{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
         // Estilos libreta
         &.base-libreta{
             #page-wrapper{
@@ -818,10 +880,11 @@ $yellow: #FDF7BF;
                             background-size: 300px auto;
                             border-bottom: 1px solid #e4e4e4;
                         }
-                        #page-content{
+                        #page-content{                            
                             #region-main{
                                 background-color: transparent;
                                 div[role=main]{
+                                    padding-top: 0;
                                     hr{
                                         display: none!important;
                                     }
@@ -829,6 +892,7 @@ $yellow: #FDF7BF;
                                         display: none!important;
                                     }
                                     .datapreferences{
+                                        margin-top: 0!important;
                                         form{
                                             &#options{
                                                 display: none!important;
@@ -836,31 +900,8 @@ $yellow: #FDF7BF;
                                             .box{
                                                 display: flex;
                                                 flex-wrap: wrap;
-                                                justify-content: space-between;
-                                                h2{
-                                                    @include font-level-1;
-                                                    font-weight: 700;
-                                                    color: $black;        
-                                                    text-align: center; 
-                                                    width: 100%;
-                                                    max-width: 800px;                         
-                                                    margin: 0 auto 40px auto;
-                                                    @media screen and (max-width: 576px){
-                                                        margin-bottom: 20px;
-                                                    }
-                                                }
-                                                p{
-                                                    @include font-level-3;
-                                                    font-weight: 400;
-                                                    color: $black;   
-                                                    text-align: center; 
-                                                    width: 100%;
-                                                    max-width: 800px;                           
-                                                    margin: 0 auto 50px auto;
-                                                    @media screen and (max-width: 576px){
-                                                        margin-bottom: 35px;
-                                                    }
-                                                }
+                                                justify-content: space-between;  
+                                                padding-top: 0!important;                                             
                                                 .post-it{
                                                     display: flex;
                                                     flex-wrap: wrap;
@@ -878,6 +919,9 @@ $yellow: #FDF7BF;
                                                         margin-bottom: 20px;
                                                     }
                                                     p{
+                                                        @include font-level-3;
+                                                        font-weight: 400;
+                                                        color: $black; 
                                                         max-width: 100%;
                                                         text-align: left;
                                                         margin-bottom: 25px;
