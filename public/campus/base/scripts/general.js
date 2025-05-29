@@ -88,11 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-
-
-// Para que la section-0 muestre el titulo o el volver según este en la portada o en un módulo. 
-
 // Espera a que el DOM esté completamente cargado
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -209,15 +204,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 const backLink = document.createElement('a');
                 backLink.href = href;
                 backLink.title = title;
-                backLink.textContent = '← Volver';
+                backLink.textContent = 'Volver';
 
                 backDiv.appendChild(backLink);
 
-                // 3. Insertar después del <nav class="navbar">
-                const navbar = document.querySelector('nav.navbar');
+                // 3. Insertar div.back al principio del elemento con id="topofscroll"
+                const pageContent = document.querySelector('#page-content');
 
-                if (navbar && navbar.parentNode) {
-                    navbar.parentNode.insertBefore(backDiv, navbar.nextSibling);
+                if (pageContent && pageContent.parentNode) {
+                pageContent.parentNode.insertBefore(backDiv, pageContent);
                 }
             }
         }
@@ -225,7 +220,6 @@ document.addEventListener("DOMContentLoaded", function() {
         /**
          * Funciones para manejar la base de libreta
          */
-
         const base_libreta = document.querySelector(".base-libreta");
 
         if(base_libreta){
@@ -245,29 +239,28 @@ document.addEventListener("DOMContentLoaded", function() {
             const stickyFooter = document.querySelector('#page-mod-data-view #sticky-footer');
 
             if (stickyFooter) {
-            const navItems = stickyFooter.querySelectorAll('div.navitem');
+                const navItems = stickyFooter.querySelectorAll('div.navitem');
 
-            navItems.forEach(item => {
-                // Asegura que el div tenga solo la clase "navitem"
-                if (item.classList.length === 1 && item.classList.contains('navitem')) {
+                navItems.forEach(item => {
+                    // Asegura que el div tenga solo la clase "navitem"
+                    if (item.classList.length === 1 && item.classList.contains('navitem')) {
+                        // Crear el nuevo enlace "Avanzar"
+                        const avanzarLink = document.createElement('a');
+                        avanzarLink.href = breadcrumbUrl;
+                        avanzarLink.title = breadcrumbTitle;
+                        avanzarLink.textContent = 'Avanzar';
+                        avanzarLink.className = 'btn btn-secondary';
 
-                // Crear el nuevo enlace "Avanzar"
-                const avanzarLink = document.createElement('a');
-                avanzarLink.href = breadcrumbUrl;
-                avanzarLink.title = breadcrumbTitle;
-                avanzarLink.textContent = 'Avanzar';
-                avanzarLink.className = 'btn btn-secondary';
+                        // Agregar el nuevo enlace al final del navitem
+                        item.appendChild(avanzarLink);
 
-                // Agregar el nuevo enlace al final del navitem
-                item.appendChild(avanzarLink);
-
-                // Buscar un <a> con clase "btn-primary" y cambiar su texto
-                const btnPrimary = item.querySelector('a.btn-primary');
-                if (btnPrimary) {
-                    btnPrimary.textContent = 'Agregar nota';
-                }
-                }
-            });
+                        // Buscar un <a> con clase "btn-primary" y cambiar su texto
+                        const btnPrimary = item.querySelector('a.btn-primary');
+                        if (btnPrimary) {
+                            btnPrimary.textContent = 'Agregar nota';
+                        }
+                    }
+                });
             }
         }
     }
