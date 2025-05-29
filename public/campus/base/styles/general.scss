@@ -802,13 +802,13 @@ $yellow: #FDF7BF;
                             height: auto;
                             background-color: transparent!important;
                             border: none!important;
+                            gap: 12px;
                             @media screen and (max-width: 576px){
-                                flex-wrap: wrap;
-                                gap: 15px;
+                                flex-wrap: wrap;                                
                             }
                             .navitem{
                                 display: flex;
-                                gap: 15px;
+                                gap: 12px;
                                 margin: 0!important;                                
                                 @media screen and (max-width: 576px){
                                     flex-wrap: wrap;
