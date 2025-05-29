@@ -529,6 +529,23 @@ $yellow: #FDF7BF;
                         .box{
                             padding: 0!important;
                         }
+                        p{
+                            @include font-level-3;
+                            font-weight: 400;
+                            color: $black;                              
+                            margin: 0 auto 25px auto;
+                            text-align: center;
+                            max-width: 800px;
+                            @media screen and (max-width: 576px){
+                                margin-bottom: 15px;
+                            }
+                            a{
+                                text-decoration: underline;
+                                font-weight: 700;
+                                color: $aqua-green;
+                                padding: 0;
+                            }
+                        }
                         // Activity Heading 
                         .activity-heading{
                             max-width: 800px;
@@ -553,6 +570,37 @@ $yellow: #FDF7BF;
                                 margin-bottom: 25px;
                                 @media screen and (max-width: 576px){
                                     margin-bottom: 15px;
+                                }
+                            }
+                        }
+                        // Video Component
+                        .video-component{
+                            max-width: 1000px;
+                            margin: 0 auto 55px auto;
+                            @media screen and (max-width: 576px){
+                                margin-bottom: 30px;
+                            }
+                            .video-wrapper{
+                                position: relative;
+                                overflow: hidden;
+                                width: 100%;
+                                padding-top: 56.25%;
+                                @include border-radius-2;
+                            }
+                            iframe{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                bottom: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            p{
+                                padding-top: 10px;
+                                color: #878787;
+                                @media screen and (max-width: 576px){
+                                    padding-top: 5px;
                                 }
                             }
                         }
