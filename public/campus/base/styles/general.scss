@@ -475,6 +475,9 @@ $yellow: #FDF7BF;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis; 
+                    @media screen and (max-width: 576px){
+                        padding: 10px 0 10px 20px;
+                    }
                     a{
                         background-image: url(/campus/base/img/back-arrow-icon.svg);
                         background-repeat: no-repeat;
@@ -485,6 +488,8 @@ $yellow: #FDF7BF;
                         font-weight: 600;
                         color: $white;                 
                         @media screen and (max-width: 576px){
+                            background-size: 13px auto;
+                            padding-left: 20px;
                         }
                     }
                 }
