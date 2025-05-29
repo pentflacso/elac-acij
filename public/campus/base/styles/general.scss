@@ -468,6 +468,26 @@ $yellow: #FDF7BF;
                 padding: 0 15px;  
                 max-width: none !important;
                 width: 100%;
+                .back{
+                    background-color: $aqua-green;
+                    width: 100%;
+                    padding: 12px 0 12px 40px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    a{
+                        background-image: url(/campus/base/img/back-arrow-icon.svg);
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        background-size: 16px auto;
+                        padding-left: 24px;
+                        @include font-level-3;
+                        font-weight: 600;
+                        color: $white;                 
+                        @media screen and (max-width: 576px){
+                        }
+                    }
+                }
                 #page-content{
                     div[role=main]{
                         max-width: 1500px;
