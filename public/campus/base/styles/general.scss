@@ -783,13 +783,13 @@ $yellow: #FDF7BF;
                                 @media screen and (max-width: 576px){
                                     flex-wrap: wrap;
                                     justify-content: center;
-                                }
-                                .btn-primary{
-                                    @include button(primary);
-                                }
-                                .btn-secondary{
-                                    @include button(secondary);                                    
-                                }
+                                }                                
+                            }
+                            .btn-primary{
+                                @include button(primary);
+                            }
+                            .btn-secondary{
+                                @include button(secondary);                                    
                             }
                         }
                     }
