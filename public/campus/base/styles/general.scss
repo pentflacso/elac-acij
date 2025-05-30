@@ -942,6 +942,16 @@ $yellow: #FDF7BF;
                 right: 0!important;
                 margin: 0 auto!important;
                 max-width: 900px!important;
+                border: none!important;
+                background-color: transparent!important;
+                padding: 30px 0!important;
+                .moodle-dialogue-hd{
+                    display: none!important;
+                }
+                .confirmation-message{
+                    width: 100%!important;
+                    height: auto!important;
+                }
             }
         }      
     }
