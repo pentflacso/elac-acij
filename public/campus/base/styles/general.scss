@@ -686,6 +686,8 @@ $yellow: #FDF7BF;
                                             font-weight: 400;
                                             color: $black;
                                             margin-bottom: 0;
+                                            text-align: left;
+                                            max-width: 100%;
                                             &.name{
                                                 @include font-level-2;
                                                 font-weight: 700;
@@ -792,7 +794,9 @@ $yellow: #FDF7BF;
                                         line-height: 150%;
                                         color: $black;
                                         padding: 0 65px;
-                                        margin-bottom: 25px;
+                                        margin: 0 0 25px 0;
+                                        text-align: left;
+                                        max-width: 100%;
                                         @media screen and (max-width: 768px){
                                             line-height: 130%;
                                             padding: 0 5px;
