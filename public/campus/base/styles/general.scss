@@ -944,13 +944,15 @@ $yellow: #FDF7BF;
                 max-width: 900px!important;
                 border: none!important;
                 background-color: transparent!important;
-                padding: 30px 0!important;
+                padding: 45px 0!important;
                 .moodle-dialogue-hd{
                     display: none!important;
                 }
                 .confirmation-message{
-                    width: 100%!important;
-                    height: auto!important;
+                    img{
+                        width: 100%!important;
+                        height: auto!important;
+                    }                    
                 }
             }
         }      
