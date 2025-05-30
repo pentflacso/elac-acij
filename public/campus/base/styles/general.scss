@@ -718,7 +718,7 @@ $yellow: #FDF7BF;
                                             white-space: nowrap;
                                             overflow: hidden;
                                             text-overflow: ellipsis;
-                                            padding: 30px 40px 30px 105px;  
+                                            padding: 30px 40px 30px 105px;                                            
                                             @media screen and (max-width: 576px){
                                                 background-position: 20px center;
                                                 background-size: 30px auto;
@@ -925,6 +925,24 @@ $yellow: #FDF7BF;
             }
         }
     }    
+    // Estilos Pop-up
+    .moodle-dialogue-base{
+        .moodle-dialogue{
+            width: 100%!important;
+            top: 0!important;
+            bottom: 0!important;
+            left: 0!important;
+            right: 0!important;  
+            background-color: aqua!important;
+            .moodle-dialogue-wrap.moodle-dialogue-content{
+                position: absolute!important;
+                left: 0!important;
+                right: 0!important;
+                margin: 0 auto!important;
+                max-width: 900px!important;
+            }
+        }      
+    }
 
     // Aplica estilos cuando se desactiva el modo edición.
     &:not(.editing){
