@@ -928,12 +928,14 @@ $yellow: #FDF7BF;
     // Estilos Pop-up
     .moodle-dialogue-base{
         .moodle-dialogue{
+            position: fixed;  
             width: 100%!important;
             top: 0!important;
             bottom: 0!important;
             left: 0!important;
             right: 0!important;  
             background-color: aqua!important;
+            overflow-y: scroll;
             .moodle-dialogue-wrap.moodle-dialogue-content{
                 position: absolute!important;
                 left: 0!important;
