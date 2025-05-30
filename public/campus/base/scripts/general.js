@@ -218,6 +218,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         /**
+         * Si la pagina es de edición de datos, reemplaza los inputs de texto por textareas
+         * 
+         */
+        replaceTextInputs();
+
+        /**
          * Funciones para manejar la base de libreta
          */
         const base_libreta = document.querySelector(".base-libreta");
@@ -264,4 +270,25 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
+
+
+    //Remplazos de input tipo text a textarea
+    function replaceTextInputs() {
+        // 1. Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-data-edit') return;
+
+        const textInputs = document.querySelectorAll('input[type="text"]');
+        textInputs.forEach(input => {
+            const textarea = document.createElement('textarea');
+            textarea.value = input.value;
+            textarea.className = input.className;
+            textarea.id = input.id;
+            textarea.name = input.name;
+            textarea.placeholder = input.placeholder;
+            
+            // Reemplazar el input por el textarea
+            input.parentNode.replaceChild(textarea, input);
+        });
+    }
+
 });
