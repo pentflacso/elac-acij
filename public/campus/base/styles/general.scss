@@ -945,15 +945,33 @@ $yellow: #FDF7BF;
                 border: none!important;
                 background-color: transparent!important;
                 padding: 45px 0!important;
+                @media screen and (max-width: 576px){
+                    padding: 15px 0!important;
+                } 
                 .moodle-dialogue-hd{
                     display: none!important;
                 }
-                .confirmation-message{
-                    img{
-                        width: 100%!important;
-                        height: auto!important;
-                    }                    
-                }
+                .moodle-dialogue-bd{
+                    .confirmation-dialogue{
+                        display: flex!important;
+                        flex-wrap: wrap!important;
+                        flex-direction: column-reverse!important;
+                        .confirmation-message{
+                            width: 100%!important;
+                            img{
+                                width: 100%!important;
+                                height: auto!important;
+                            }                    
+                        }
+                        .confirmation-buttons{
+                            width: 100%!important;
+                            text-align: right!important;
+                            .btn-primary{
+                                @include button(primary);
+                            }
+                        } 
+                    }                   
+                }                
             }
         }      
     }
