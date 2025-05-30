@@ -252,10 +252,16 @@ $yellow: #FDF7BF;
                         }
                     }
                     .custom-audio{
-                        margin: 30px auto 30px auto;
-                        width: 50%;
-                        @media screen and (max-width: 576px){
-                            width: 80%;
+                        margin: 30px auto 30px auto;                       
+                        audio{
+                            width: 50%;
+                            @media screen and (max-width: 576px){
+                                width: 90%;
+                            }
+                        }                   
+                        audio::-webkit-media-controls-panel {
+                            background-color: #fff;
+                            color: #fff;
                         }
                     }
                     .custom-btns{
@@ -745,6 +751,18 @@ $yellow: #FDF7BF;
                                                 @media screen and (max-width: 576px){
                                                     border: solid 1px #ededed; 
                                                 } 
+                                            }
+                                        }
+                                        &.audio{
+                                            display: flex;
+                                            justify-content: center;
+                                            padding: 15px;  
+                                            audio{
+                                                width: 100%;
+                                            }
+                                            audio::-webkit-media-controls-panel {
+                                                background-color: #fff;
+                                                color: #fff;
                                             }
                                         }
                                     }                                    
