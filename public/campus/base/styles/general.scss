@@ -724,6 +724,11 @@ $yellow: #FDF7BF;
                                                 background-size: 30px auto;
                                                 padding: 15px 15px 15px 60px;  
                                             }
+                                            p{
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                            }
                                             a{
                                                 @include font-level-3;
                                                 font-weight: 400;
@@ -830,10 +835,12 @@ $yellow: #FDF7BF;
                                             @media screen and (max-width: 1200px){
                                                 top: 30px;
                                                 left: 25px;
+                                                right: 0;
                                             }
                                             @media screen and (max-width: 768px){
                                                 top: 30px;
                                                 left: 22px;
+                                                right: 0;
                                                 background-size: 8px auto;
                                                 padding: 0 0 0 15px;
                                             }
