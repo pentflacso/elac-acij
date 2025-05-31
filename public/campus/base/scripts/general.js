@@ -239,12 +239,12 @@ document.addEventListener("DOMContentLoaded", function() {
         textInputs.forEach(input => {
             const textarea = document.createElement('textarea');
             const parentInput = input.parentNode;
-            
+
             textarea.value = input.value;
             textarea.className = input.className;
             textarea.id = input.id;
             textarea.name = input.name;
-            textarea.placeholder = parentInput.title;
+            textarea.placeholder = parentInput.title ? parentInput.title : input.placeholder;
             
             // Reemplazar el input por el textarea
             input.parentNode.replaceChild(textarea, input);
