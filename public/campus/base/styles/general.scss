@@ -1137,6 +1137,21 @@ $yellow: #FDF7BF;
                 }
             }            
         }
+        .title-table-bd{
+            width: 100%;
+            @include font-level-1;
+            color: $aqua-green;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 20px;
+            margin: 80px 0 25px 0;            
+            border-top: 3px solid $black;
+            @media screen and (max-width: 576px){
+                padding-top: 15px;
+                margin: 55px 0 15px 0;    
+                border-top: 2px solid $black;
+            }
+        }
         .content-card-bd{
             display: flex;
             flex-wrap: wrap;
@@ -1221,6 +1236,11 @@ $yellow: #FDF7BF;
                     @media screen and (max-width: 1000px){
                         width: 100%;
                     } 
+                }                   
+            }
+            &.one-card{         
+                .card-bd{
+                    width: 100%; 
                 }                   
             }
         }
