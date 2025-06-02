@@ -627,6 +627,18 @@ $yellow: #FDF7BF;
                         .box{
                             padding: 0!important;
                         }
+                        h2{                                                    
+                            @include font-level-1;
+                            font-weight: 700;
+                            color: $black;        
+                            text-align: center; 
+                            width: 100%;
+                            max-width: 800px;                         
+                            margin: 0 auto 45px auto;
+                            @media screen and (max-width: 576px){
+                                margin-bottom: 25px;
+                            }                                                    
+                        }
                         p{
                             @include font-level-3;
                             font-weight: 400;
@@ -974,7 +986,8 @@ $yellow: #FDF7BF;
                         // Estilos botonera bases de datos
                         .stickyfooter{
                             position: static!important;
-                            display: flex!important;
+                            display: flex!important;                            
+                            flex-wrap: wrap!important;
                             justify-content: center!important;
                             align-items: center!important;
                             box-shadow: none!important;
@@ -986,14 +999,34 @@ $yellow: #FDF7BF;
                             @media screen and (max-width: 576px){
                                 flex-wrap: wrap;                                
                             }
-                            .navitem{
+                            .navitem{                                
                                 display: flex;
+                                justify-content: center!important;
+                                align-items: center!important;
                                 gap: 12px;
+                                width: 100%;
                                 margin: 0!important;                                
                                 @media screen and (max-width: 576px){
                                     flex-wrap: wrap;
                                     justify-content: center;
-                                }                                
+                                }     
+                                .pagination{
+                                    &:first-of-type{
+                                        margin-bottom: 15px;
+                                    }
+                                    .page-item{
+                                        color: $black;
+                                        .page-link{
+                                            color: $black;
+                                        } 
+                                        &.active{
+                                            .page-link{
+                                                background-color: $aqua-green;
+                                                color: $white;                                                
+                                            }                                            
+                                        }
+                                    }
+                                }                           
                             }
                             .btn-primary{
                                 @include button(primary);
@@ -1151,6 +1184,19 @@ $yellow: #FDF7BF;
                 }
                 p{
                     text-align: left!important;
+                }
+                textarea{
+                    background-color: transparent!important;
+                    width: 100%!important;
+                    min-height: 150px!important;
+                    border: none!important;
+                    padding: 0!important;
+                    @include font-level-3;
+                    color: $black;
+                    border-radius: 0;
+                    @media screen and (max-width: 576px){
+                        min-height: 130px; 
+                    }
                 }
             }
         }
