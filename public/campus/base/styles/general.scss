@@ -1116,9 +1116,12 @@ $yellow: #FDF7BF;
                 color: $white;
                 font-weight: 600;
                 text-align: center;
-                padding: 20px 10px;
+                padding: 20px 15px;
                 @include border-radius-4;
                 margin: 0;
+                @media screen and (max-width: 576px){
+                    text-align: left;
+                } 
             }
             .card-bd{
                 background-color: $gray-2;
