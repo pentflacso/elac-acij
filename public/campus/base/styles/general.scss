@@ -57,9 +57,9 @@ $yellow: #FDF7BF;
     }
 }
 @mixin font-level-4 {
-    font-size: 14px;
+    font-size: 16px;
     @media screen and (max-width: 576px){
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -123,6 +123,13 @@ $yellow: #FDF7BF;
     border-radius: 20px;
     @media screen and (max-width: 576px){
         border-radius: 10px;
+    }
+}
+
+@mixin border-radius-4 {
+    border-radius: 6px;
+    @media screen and (max-width: 576px){
+        border-radius: 3px;
     }
 }
 
@@ -844,7 +851,7 @@ $yellow: #FDF7BF;
                                             position: absolute;
                                             top: 85px;
                                             right: 220px;
-                                            @include font-level-4;
+                                            font-size: 14px;
                                             background-image: url(/campus/base/img/rayo_icon_date.jpg);
                                             background-repeat: no-repeat;
                                             background-position: left center;
@@ -860,7 +867,10 @@ $yellow: #FDF7BF;
                                                 left: 22px;
                                                 right: 0;
                                                 background-size: 8px auto;
-                                                padding: 0 0 0 15px;
+                                                padding: 0 0 0 15px;                                                
+                                            }
+                                            @media screen and (max-width: 576px){
+                                                font-size: 12px;
                                             }
                                         }
                                         &.email{
@@ -999,8 +1009,8 @@ $yellow: #FDF7BF;
     }
 
     // Aplica estilos cuando se desactiva el modo edición.
-    &:not(.editing){
-    //&.editing{
+    //&:not(.editing){
+    &.editing{
         #page{
             .main-inner{
                 #page-header, .secondary-navigation{
@@ -1023,7 +1033,7 @@ $yellow: #FDF7BF;
                         }                
                         .activity-description{  
                             padding: 0!important;                                  
-                            h2{
+                            h2, h3{
                                 @include font-level-1;
                                 font-weight: 700;
                                 color: $black;        
@@ -1062,6 +1072,80 @@ $yellow: #FDF7BF;
                         .activity-header{
                             display: none;
                         }
+                    }
+                }
+            }
+        }
+
+        // Estilos BD Tablas
+        .content-table{
+            .user-content{
+                display: flex;                 
+                align-items: end;
+                margin: 65px 0 20px 0; 
+                .user-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;       
+                    div{
+                        text-align: center;
+                        a{
+                            @include font-level-4;
+                            color: $black;
+                        }
+                    }        
+                    .userinitials{
+                        margin: 0;
+                        margin-bottom: 5px;
+                    }
+                }
+                .user-modify{
+                    margin-left: auto;
+                    @include font-level-4;
+                    color: $black;
+                }
+                .menu-action{
+                    margin-left: auto;
+                    .dropdown-toggle{
+                        background-color: $gray-2;
+                    }
+                }
+            }
+            .content-card{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 30px;                
+                .title-card{
+                    width: 100%;
+                    background-color: $black;
+                    @include font-level-2;
+                    color: $white;
+                    font-weight: 600;
+                    text-align: center;
+                    padding: 20px 10px;
+                    @include border-radius-4;
+                    margin: 0;
+                }
+                .card{
+                    background-color: $gray-2;
+                    width: calc(50% - 5px);
+                    min-height: 250px;
+                    @include font-level-3;
+                    color: $black;
+                    border: none;
+                    @include border-radius-4;
+                    padding: 30px 40px;
+                    
+                    h5{
+                        @include font-level-3;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        color: $aqua-green;
+                        margin-bottom: 15px;  
+                    }
+                    p{
+                        text-align: left!important;
                     }
                 }
             }
