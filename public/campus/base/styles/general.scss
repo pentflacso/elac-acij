@@ -1141,7 +1141,7 @@ $yellow: #FDF7BF;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 30px;                
+            margin-bottom: 30px;                          
             .title-card-bd{
                 width: 100%;
                 background-color: $black;
@@ -1149,9 +1149,16 @@ $yellow: #FDF7BF;
                 color: $white;
                 font-weight: 600;
                 text-align: center;
-                padding: 20px 15px;
+                padding: 20px 10%;
                 @include border-radius-4;
                 margin: 0;
+                span{
+                    max-width: 900px;
+                }
+                @media screen and (max-width: 768px){
+                    padding: 20px 15px;
+                    text-align: left;
+                } 
                 @media screen and (max-width: 576px){
                     text-align: left;
                 } 
@@ -1175,6 +1182,7 @@ $yellow: #FDF7BF;
                 h5{
                     @include font-level-3;
                     font-weight: 900;
+                    line-height: 120%;
                     text-transform: uppercase;
                     color: $aqua-green;
                     margin-bottom: 15px;  
@@ -1198,6 +1206,22 @@ $yellow: #FDF7BF;
                         min-height: 130px; 
                     }
                 }
+                .custom-select{
+                    background-color: $white;
+                    width: 100%;
+                    @include font-level-3;
+                    color: $black;
+                    border: none;
+                }
+            }
+            &.three-cards{    
+                gap: 10px;       
+                .card-bd{
+                    width: calc((100% / 3) - 7px); 
+                    @media screen and (max-width: 1000px){
+                        width: 100%;
+                    } 
+                }                   
             }
         }
     }
