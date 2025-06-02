@@ -1009,8 +1009,8 @@ $yellow: #FDF7BF;
     }
 
     // Aplica estilos cuando se desactiva el modo edición.
-    //&:not(.editing){
-    &.editing{
+    &:not(.editing){
+    //&.editing{
         #page{
             .main-inner{
                 #page-header, .secondary-navigation{
