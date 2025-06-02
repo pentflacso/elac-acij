@@ -1030,13 +1030,15 @@ $yellow: #FDF7BF;
                 }
             }
             .user-actions-bd{
-                .user-modify-bd{
-                    margin-left: auto;
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                .user-modify-bd{                    
                     @include font-level-4;
                     color: $black;
+                    margin-right: 25px;
                 }
                 .menu-action-bd{
-                    margin-left: auto;
                     .dropdown-toggle{
                         background-color: $gray-2;
                     }
