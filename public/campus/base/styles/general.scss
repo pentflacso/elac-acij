@@ -581,7 +581,12 @@ $yellow: #FDF7BF;
                                 }
                                 &:last-child{
                                     margin-bottom: 0;
-                                }                                        
+                                }    
+                                a{
+                                    color: $aqua-green;
+                                    font-weight: 700;
+                                    text-decoration: underline;                                    
+                                }                                    
                             }
                         }
                     }
