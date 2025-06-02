@@ -585,7 +585,10 @@ $yellow: #FDF7BF;
                                 a{
                                     color: $aqua-green;
                                     font-weight: 700;
-                                    text-decoration: underline;                                    
+                                    text-decoration: underline;    
+                                    &:hover{
+                                        color: $black;
+                                    }                                
                                 }                                    
                             }
                         }
@@ -665,6 +668,14 @@ $yellow: #FDF7BF;
                                 margin-bottom: 25px;
                                 @media screen and (max-width: 576px){
                                     margin-bottom: 15px;
+                                }
+                                a{
+                                    color: $aqua-green;
+                                    font-weight: 700;
+                                    text-decoration: underline;    
+                                    &:hover{
+                                        color: $black;
+                                    }                                
                                 }
                             }
                         }
