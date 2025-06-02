@@ -545,6 +545,46 @@ $yellow: #FDF7BF;
                 }
                 #page-content{
                     padding: 0 15px;
+                    .activity-header{
+                        background-color: transparent;
+                        display: block;
+                        margin: 0 0 60px 0!important;    
+                        padding-top: 65px;            
+                        @media screen and (max-width: 576px){
+                            padding-top: 35px;  
+                            margin-bottom: 30px!important;
+                        }                
+                        .activity-description{  
+                            padding: 0!important;                                  
+                            h2, h3{
+                                @include font-level-1;
+                                font-weight: 700;
+                                color: $black;        
+                                text-align: center; 
+                                width: 100%;
+                                max-width: 800px;                         
+                                margin: 0 auto 30px auto;
+                                @media screen and (max-width: 576px){
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            p{
+                                @include font-level-3;
+                                font-weight: 400;
+                                color: $black;   
+                                text-align: center; 
+                                width: 100%;
+                                max-width: 800px;                           
+                                margin: 0 auto 50px auto;
+                                @media screen and (max-width: 576px){
+                                    margin-bottom: 35px;
+                                }
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }                                        
+                            }
+                        }
+                    }
                     div[role=main]{
                         max-width: 1500px;
                         margin: 0 auto;
@@ -1096,47 +1136,7 @@ $yellow: #FDF7BF;
                         .modified{
                             display: none;
                         }
-                    }
-                    .activity-header{
-                        background-color: transparent;
-                        display: block;
-                        margin: 0 0 60px 0!important;    
-                        padding-top: 65px;            
-                        @media screen and (max-width: 576px){
-                            padding-top: 35px;  
-                            margin-bottom: 30px!important;
-                        }                
-                        .activity-description{  
-                            padding: 0!important;                                  
-                            h2, h3{
-                                @include font-level-1;
-                                font-weight: 700;
-                                color: $black;        
-                                text-align: center; 
-                                width: 100%;
-                                max-width: 800px;                         
-                                margin: 0 auto 30px auto;
-                                @media screen and (max-width: 576px){
-                                    margin-bottom: 20px;
-                                }
-                            }
-                            p{
-                                @include font-level-3;
-                                font-weight: 400;
-                                color: $black;   
-                                text-align: center; 
-                                width: 100%;
-                                max-width: 800px;                           
-                                margin: 0 auto 50px auto;
-                                @media screen and (max-width: 576px){
-                                    margin-bottom: 35px;
-                                }
-                                &:last-child{
-                                    margin-bottom: 0;
-                                }                                        
-                            }
-                        }
-                    }
+                    }                    
                 }
             }
         }
