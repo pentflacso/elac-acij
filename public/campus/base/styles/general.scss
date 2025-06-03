@@ -762,13 +762,21 @@ $yellow: #FDF7BF;
                                                 border-radius: 15px 0 15px 15px; 
                                             } 
                                         }
-                                        p{
+                                        p, ul li{
                                             @include font-level-3;
                                             font-weight: 400;
                                             color: $black;
                                             margin-bottom: 0;
                                             text-align: left;
+                                            width: 100%;
                                             max-width: 100%;
+                                            margin-bottom: 15px;
+                                            @media screen and (max-width: 576px){
+                                                margin-bottom: 10px;
+                                            }
+                                            &:last-child{
+                                                margin-bottom: 0;
+                                            }
                                             &.name{
                                                 @include font-level-2;
                                                 font-weight: 700;
@@ -799,23 +807,23 @@ $yellow: #FDF7BF;
                                                 margin-bottom: 20px;
                                                 font-style: italic;
                                                 color: #b7b7b7;
+                                                @media screen and (max-width: 576px){
+                                                    background-size: 15px auto;   
+                                                    padding-left: 20px;
+                                                    margin-bottom: 15px;
+                                                } 
                                             }
                                         }
-                                        &.link{                                            
-                                            display: inline-block; 
-                                            white-space: nowrap;
-                                            overflow: hidden;
-                                            text-overflow: ellipsis;
+                                        ul{
+                                            padding-left: 22px;
+                                            margin-bottom: 0;
+                                        }
+                                        &.link{       
+                                            display: flex;
+                                            flex-wrap: wrap;                                     
                                             padding: 30px 40px;                                            
                                             @media screen and (max-width: 576px){
-                                                background-position: 20px center;
-                                                background-size: 30px auto;
-                                                padding: 15px 15px 15px 60px;  
-                                            }
-                                            p{
-                                                white-space: nowrap;
-                                                overflow: hidden;
-                                                text-overflow: ellipsis;
+                                                padding: 15px;  
                                             }
                                             a{
                                                 background-image: url(/campus/base/img/link-icon.svg);
@@ -829,11 +837,30 @@ $yellow: #FDF7BF;
                                                 @include font-level-3;
                                                 font-weight: 400;
                                                 color: $black;
-                                                padding: 12px 20px 12px 65px;
+                                                padding: 12px 0 12px 65px;
+                                                width: 100%;
+                                                @media screen and (max-width: 576px){
+                                                    background-size: 30px auto;
+                                                    padding: 5px 0 5px 40px; 
+                                                }
                                             }
                                         }
                                         &.image{
                                             padding: 15px;  
+                                            p{
+                                                margin-left: 25px;
+                                                margin-right: 25px;
+                                                &:first-of-type{
+                                                    margin-top: 15px;
+                                                }
+                                                @media screen and (max-width: 1024px){
+                                                    margin-left: 5px;
+                                                    margin-right: 5px;
+                                                    &:first-of-type{
+                                                        margin-top: 5px;
+                                                    }
+                                                }
+                                            }
                                             img{
                                                 width: 100%;
                                                 height: auto;
@@ -848,7 +875,10 @@ $yellow: #FDF7BF;
                                             display: flex;
                                             justify-content: center;
                                             flex-wrap: wrap;
-                                            padding: 30px 40px;                 
+                                            padding: 30px 40px; 
+                                            @media screen and (max-width: 576px){
+                                                padding: 15px; 
+                                            }                
                                             audio{
                                                 width: 100%;
                                             }
