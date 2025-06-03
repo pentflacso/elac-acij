@@ -639,7 +639,7 @@ $yellow: #FDF7BF;
                                 margin-bottom: 25px;
                             }                                                    
                         }
-                        p{
+                        p, ul li{
                             @include font-level-3;
                             font-weight: 400;
                             color: $black;                              
@@ -655,6 +655,70 @@ $yellow: #FDF7BF;
                                 color: $aqua-green;
                                 padding: 0;
                             }
+                        }
+                        ul{
+                            &.numbers-list{
+                                list-style: none;
+                                padding: 0;
+                                max-width: 800px;
+                                margin: 0 auto;
+                                li{
+                                    position: relative;
+                                    text-align: left;
+                                    max-width: 100%;
+                                    padding-left: 70px;
+                                    @media screen and (max-width: 576px){
+                                        padding-left: 45px;
+                                    }
+                                    &::before {                                       
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        content: "-";
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;                          
+                                        width: 50px;
+                                        height: 50px;                            
+                                        font-family: "Sen", sans-serif;
+                                        font-weight: 800;
+                                        color: $aqua-green;
+                                        font-size: 30px;
+                                        border-radius: 50%;
+                                        background-color: $gray-2;                                        
+                                        @media screen and (max-width: 576px){
+                                            width: 35px;
+                                            height: 35px;
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    &:nth-child(1){
+                                        &::before{
+                                            content: "1";
+                                        }                                             
+                                    }
+                                    &:nth-child(2){
+                                        &::before{
+                                            content: "2";
+                                        }                                             
+                                    }
+                                    &:nth-child(3){
+                                        &::before{
+                                            content: "3";
+                                        }                                             
+                                    }
+                                    &:nth-child(4){
+                                        &::before{
+                                            content: "4";
+                                        }                                             
+                                    }
+                                    &:nth-child(5){
+                                        &::before{
+                                            content: "5";
+                                        }                                             
+                                    }
+                                }                                
+                            }                            
                         }
                         // Activity Heading 
                         .activity-heading{
