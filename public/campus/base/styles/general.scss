@@ -1127,6 +1127,27 @@ $yellow: #FDF7BF;
                                 height: 115.4%;
                             }                                      
                         }
+                        // Image Component
+                        .image-component{
+                            display: flex;
+                            @include border-radius-1;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                        // Clases para ocultar en Desk y Mobile  
+                        .show-in-desk{
+                            @media screen and (max-width: 576px){
+                                display: none;                                
+                            }                       
+                        }
+                        .show-in-mobile{
+                            @media screen and (min-width: 576px){
+                                display: none;                                
+                            }                       
+                        }                        
                         // Estilos botonera bases de datos
                         .stickyfooter{
                             position: static!important;
