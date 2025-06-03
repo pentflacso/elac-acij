@@ -789,17 +789,24 @@ $yellow: #FDF7BF;
                                                     color: $sky-blue;
                                                 }
                                             }
+                                            &.forwarded{
+                                                background-image: url(/campus/base/img/forwarded-icon.jpg);
+                                                background-repeat: no-repeat;
+                                                background-position: left center;
+                                                background-size: 20px auto;                                                
+                                                width: 100%;
+                                                padding-left: 26px;
+                                                margin-bottom: 20px;
+                                                font-style: italic;
+                                                color: #b7b7b7;
+                                            }
                                         }
-                                        &.link{
-                                            background-image: url(/campus/base/img/link-icon.svg);
-                                            background-repeat: no-repeat;
-                                            background-position: 40px center;
-                                            background-size: 50px auto;
+                                        &.link{                                            
                                             display: inline-block; 
                                             white-space: nowrap;
                                             overflow: hidden;
                                             text-overflow: ellipsis;
-                                            padding: 30px 40px 30px 105px;                                            
+                                            padding: 30px 40px;                                            
                                             @media screen and (max-width: 576px){
                                                 background-position: 20px center;
                                                 background-size: 30px auto;
@@ -811,9 +818,18 @@ $yellow: #FDF7BF;
                                                 text-overflow: ellipsis;
                                             }
                                             a{
+                                                background-image: url(/campus/base/img/link-icon.svg);
+                                                background-repeat: no-repeat;
+                                                background-position: left center;
+                                                background-size: 50px auto;
+                                                display: inline-block; 
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
                                                 @include font-level-3;
                                                 font-weight: 400;
                                                 color: $black;
+                                                padding: 12px 20px 12px 65px;
                                             }
                                         }
                                         &.image{
@@ -831,13 +847,17 @@ $yellow: #FDF7BF;
                                         &.audio{
                                             display: flex;
                                             justify-content: center;
-                                            padding: 15px;  
+                                            flex-wrap: wrap;
+                                            padding: 30px 40px;                 
                                             audio{
                                                 width: 100%;
                                             }
                                             audio::-webkit-media-controls-panel {
-                                                background-color: #fff;
+                                                background-color: #f7f7f7;
                                                 color: #fff;
+                                            }
+                                            p{
+                                                width: 100%;
                                             }
                                         }
                                     }                                    
