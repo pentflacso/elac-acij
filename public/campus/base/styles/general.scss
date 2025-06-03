@@ -1185,7 +1185,7 @@ $yellow: #FDF7BF;
                 }
             }
         }
-    }    
+    }   
     // Estilos Pop-up
     .moodle-dialogue-base{
         .moodle-dialogue{
@@ -1426,7 +1426,7 @@ $yellow: #FDF7BF;
                 .main-inner{
                     #page-content{
                         .activity-header{
-                            display: none;
+                            display: none!important;
                         }
                     }
                 }
