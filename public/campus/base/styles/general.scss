@@ -214,7 +214,7 @@ $yellow: #FDF7BF;
                     @media screen and (max-width: 576px){
                         margin: 20px auto 0 auto!important;
                     }
-                    p{
+                    p, ul li{
                         @include font-level-3;
                         font-weight: 400;
                         color: $black;
@@ -223,6 +223,41 @@ $yellow: #FDF7BF;
                             font-weight: 700;
                             text-decoration: underline;
                             color: $black;
+                        }
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        max-width: 550px;
+                        text-align: left;
+                        margin: 25px auto 28px auto;
+                        @media screen and (max-width: 576px){
+                            max-width: 95%;
+                            margin: 15px auto 18px auto;
+                        }
+                        li{
+                            position: relative;
+                            padding-left: 20px;
+                            margin-bottom: 0;
+                            @media screen and (max-width: 576px){
+                                padding-left: 15px;
+                            }
+                            &::before {                                       
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                content: "•";
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;                                                    
+                                font-family: "Sen", sans-serif;
+                                font-weight: 800;
+                                color: $black;
+                                font-size: 24px;                                      
+                                @media screen and (max-width: 576px){
+                                    font-size: 20px;
+                                }
+                            }
                         }
                     }
                     img{
@@ -301,8 +336,8 @@ $yellow: #FDF7BF;
     } 
     
     // Aplica estilos cuando se desactiva el modo edición.
-    &:not(.editing){
-    //&.editing{
+    //&:not(.editing){
+    &.editing{
         #page-wrapper{
             #page{
                 .main-inner{
