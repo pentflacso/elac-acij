@@ -1614,6 +1614,23 @@ $yellow: #FDF7BF;
         }            
     }
 }
+// Estilos específicos en añadir entrada BD  
+#page-mod-data-edit{
+    .activity-header{
+        display: none!important;
+    }
+    div[role=main]{
+        h2:first-of-type{
+            display: none;
+        }
+        .activity-heading{
+            padding-top: 65px;            
+            @media screen and (max-width: 576px){
+                padding-top: 35px;  
+            }             
+        }
+    } 
+}
 
 
 /* ------------------------------------------------------------ */
