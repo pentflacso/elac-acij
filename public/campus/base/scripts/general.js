@@ -227,6 +227,12 @@ document.addEventListener("DOMContentLoaded", function() {
          * Funcion para agregar un enlace "Avanzar" al sticky footer en la página de vista de datos
          */
         stickyFooter(breadcrumb);
+
+        /**
+         * Función para reorganizar las tarjetas dentro de la base de datos
+         * y colocarlas en el contenedor correspondiente según su clase.
+         */
+        accordionCardBd();
     }
 
 
@@ -304,4 +310,49 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    function accordionCardBd(){
+        // 1. Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-data-view') return;
+        
+        // 2. Verificar si existe el contenedor de la tabla acordeón
+        const accordionContainer = document.querySelector('.accordion-table-bd');
+        
+        // 3. Si no existe, salir de la función
+        if (!accordionContainer) return;
+        
+        // 4. Seleccionar todas las tarjetas dentro de la BD
+        const cards = document.querySelectorAll('.card-bd');
+
+        cards.forEach(card => {
+            // 5. Buscar la clase que sigue el patrón "C1", "C2", etc.
+            const classList = Array.from(card.classList);
+            const matchClass = classList.find(cls => /^C\d+$/.test(cls)); 
+
+            // 6. Si se encuentra una clase que coincide, buscar el contenedor correspondiente
+            if (matchClass) {
+                const contentCard = document.querySelector(`.content-card-bd[data-collect="${matchClass}"]`);
+                
+                const targetCollapse = contentCard.querySelector('.contentcollapse-bd');
+                
+                if (targetCollapse) {
+                    targetCollapse.appendChild(card);
+                }     
+            }
+        });
+
+        // 4. Agregar funcionalidad de accordion
+        const titleCards = document.querySelectorAll('.title-card-bd');
+
+        titleCards.forEach(title => {
+            title.addEventListener('click', () => {
+
+                title.classList.toggle('icon-collapse');
+
+                const content = title.nextElementSibling;
+                if (content && content.classList.contains('contentcollapse-bd')) {
+                    content.classList.toggle('show');
+                }
+            });
+        });
+    }
 });
