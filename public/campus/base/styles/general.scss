@@ -674,7 +674,7 @@ $yellow: #FDF7BF;
                                 margin-bottom: 25px;
                             }                                                    
                         }
-                        p, ul li{
+                        p{
                             @include font-level-3;
                             font-weight: 400;
                             color: $black;                              
@@ -697,6 +697,14 @@ $yellow: #FDF7BF;
                                 padding: 0;
                                 max-width: 800px;
                                 margin: 0 auto;
+                                @include font-level-3;
+                                font-weight: 400;
+                                color: $black;                            
+                                text-align: center;
+                                max-width: 800px;
+                                @media screen and (max-width: 576px){
+                                    margin-bottom: 15px;
+                                }
                                 li{
                                     position: relative;
                                     text-align: left;
@@ -751,6 +759,12 @@ $yellow: #FDF7BF;
                                         &::before{
                                             content: "5";
                                         }                                             
+                                    }
+                                    a{
+                                        text-decoration: underline;
+                                        font-weight: 700;
+                                        color: $aqua-green;
+                                        padding: 0;
                                     }
                                 }                                
                             }                            
