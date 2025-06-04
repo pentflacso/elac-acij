@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 title.classList.toggle('icon-collapse');
 
                 const content = title.nextElementSibling;
-                if (content && content.classList.contains('contentcollapse-bd')) {
+                if (content && content.classList.contains('collapse-bd')) {
                     content.classList.toggle('show');
                 }
             });
