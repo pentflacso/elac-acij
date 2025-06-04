@@ -340,18 +340,52 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // 4. Agregar funcionalidad de accordion
-        const titleCards = document.querySelectorAll('.title-card-bd');
+        // 4. Comportamiento del acordeón exclusivo
+        const allContentCards = document.querySelectorAll('.content-card-bd');
 
-        titleCards.forEach(title => {
+        allContentCards.forEach((card, index) => {
+            const title = card.querySelector('.title-card-bd');
+            const content = card.querySelector('.collapse-bd');
+
+            if (!title || !content) return;
+
+            // Estado inicial: el primero colapsado, el resto abiertos
+            if (index === 0) {
+                content.classList.add('show');
+                title.classList.add('icon-collapse');
+            } else {
+                content.classList.remove('show');
+                title.classList.remove('icon-collapse');
+            }
+
+            // Agregar evento de clic
             title.addEventListener('click', () => {
 
-                title.classList.toggle('icon-collapse');
+                const isOpen = content.classList.contains('show');
 
-                const content = title.nextElementSibling;
-                if (content && content.classList.contains('collapse-bd')) {
-                    content.classList.toggle('show');
+                // Si ya está abierto, contraer y al resto no hacer nada
+                if(isOpen){
+                    // Si ya está abierto, colapsar
+                    content.classList.remove('show');
+                    title.classList.remove('icon-collapse');
+                    return;
                 }
+
+                // Contraer todos
+                allContentCards.forEach(otherCard => {
+                    const otherTitle = otherCard.querySelector('.title-card-bd');
+                    const otherContent = otherCard.querySelector('.collapse-bd');
+                    if (otherContent && otherTitle) {
+                        otherContent.classList.remove('show');
+                        otherTitle.classList.remove('icon-collapse');
+                    }
+                });
+
+                // Expandir solo el clickeado
+                content.classList.add('show');
+                title.classList.add('icon-collapse');
+
+                title.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
     }
