@@ -699,19 +699,16 @@ $yellow: #FDF7BF;
                                 margin: 0 auto;
                                 @include font-level-3;
                                 font-weight: 400;
-                                color: $black;                            
-                                text-align: center;
-                                max-width: 800px;
-                                @media screen and (max-width: 576px){
-                                    margin-bottom: 15px;
-                                }
+                                color: $black;                                                           
                                 li{
                                     position: relative;
                                     text-align: left;
                                     max-width: 100%;
                                     padding-left: 70px;
+                                    margin-bottom: 25px!important;
                                     @media screen and (max-width: 576px){
                                         padding-left: 45px;
+                                        margin-bottom: 15px!important;
                                     }
                                     &::before {                                       
                                         position: absolute;
