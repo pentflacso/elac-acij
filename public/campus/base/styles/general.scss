@@ -1454,7 +1454,7 @@ $yellow: #FDF7BF;
                     text-align: left;
                 } 
             }
-            .card-bd{
+            .card-bd, .respuesta-elac{
                 background-color: $gray-2;
                 width: calc(50% - 5px);
                 min-height: 250px;
@@ -1520,6 +1520,55 @@ $yellow: #FDF7BF;
                 }                   
             }
         }
+        .collapse-bd{
+            width: 100%;            
+            .contentcollapse-bd{    
+                .card-bd{
+                    position: relative;
+                    width: 100%!important;
+                    margin-bottom: 10px;
+                    min-height: auto;
+                    h5{
+                        a{
+                            color: $aqua-green;
+                            text-transform: none;
+                        }
+                    }
+                    .menu-action-bd{
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        .action-menu-trigger{
+                            .dropdown-toggle{
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+            .respuesta-elac{
+                width: 100%; 
+                min-height: auto;
+                background-color: $yellow;
+                margin-bottom: 35px;
+                @media screen and (max-width: 576px){
+                    margin-bottom: 25px;
+                }
+                p{
+                    min-width: 100%;
+                }
+                ul{
+                    padding-left: 22px;
+                    margin-bottom: 0;
+                    li{
+                        margin-bottom: 15px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
         .content-file{
             display: flex;
             align-items: center;
@@ -1554,6 +1603,25 @@ $yellow: #FDF7BF;
                 margin-bottom: 65px;
                 @media screen and (max-width: 576px){
                     margin-bottom: 25px;
+                }
+            }
+        }
+        &.accordion-table-bd{
+            .title-card-bd{
+                background-image: url(/campus/base/img/dropdown-icon.png);
+                background-repeat: no-repeat;                     
+                background-size: 35px auto;
+                background-position: right 15px top 15px;
+                text-align: left!important;
+                font-weight: 400;
+                line-height: 130%;
+                padding: 20px 20% 20px 40px;
+                @media screen and (max-width: 576px){
+                    padding: 20px 20% 20px 15px;
+                }
+                cursor: pointer;
+                &.icon-collapse{
+                    background-image: url(/campus/base/img/dropdown-collapse-icon.png);
                 }
             }
         }
