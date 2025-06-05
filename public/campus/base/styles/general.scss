@@ -1511,10 +1511,16 @@ $yellow: #FDF7BF;
     #content-table-bd{
         .content-file{
             max-width: 800px;
-            margin: 0 auto 65px auto;
+            margin: 0 auto 45px auto;
+            @media screen and (max-width: 576px){
+                margin-bottom: 35px;
+            }
             .mod-data-input{
                 .filemanager-container.card{
                     min-height: 350px;
+                    @media screen and (max-width: 576px){
+                        min-height: 150px;
+                    }
                 }
             }
         }        
