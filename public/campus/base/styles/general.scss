@@ -1665,6 +1665,143 @@ $yellow: #FDF7BF;
             }
         }        
     }
+    // Estilos cuestionarios
+    &.path-mod-quiz{
+        #page{
+            .main-inner{
+                #page-content{
+                    div[role=main]{
+                        padding-top: 0!important;       
+                        max-width: 1200px!important;      
+                        .btn-primary{
+                            @include button(primary);  
+                        }
+                        .btn-secondary{
+                            @include button(secondary);  
+                        }
+                        .multichoice{
+                            .info{
+                                display: none;
+                            }
+                            .content{
+                                margin-left: 0;
+                                p{
+                                    text-align: left!important;
+                                    max-width: 100%!important;
+                                }
+                                .formulation{
+                                    background-color: $gray-2;
+                                    padding: 55px 65px;
+                                    @include border-radius-2;
+                                    @media screen and (max-width: 768px){
+                                        padding: 15px;
+                                    }
+                                    .qtext{
+                                        background-color: $white;
+                                        margin-bottom: 0!important;
+                                        padding: 45px 55px 0 55px;
+                                        @include border-radius-3;
+                                        border-bottom-left-radius: 0;
+                                        border-bottom-right-radius: 0;
+                                        @media screen and (max-width: 768px){
+                                            padding: 25px 15px 0 15px;
+                                            border-bottom-left-radius: 0;
+                                            border-bottom-right-radius: 0;
+                                        }
+                                        p{
+                                            font-weight: 700!important;
+                                            &:last-child{
+                                                margin-bottom: 0!important;
+                                            }
+                                        }
+                                    }
+                                    fieldset{
+                                        margin-top: 0;
+                                        margin-bottom: 0;
+                                        background-color: $white;  
+                                        padding: 35px 55px 45px 55px;
+                                        @include border-radius-3;
+                                        border-top-left-radius: 0;
+                                        border-top-right-radius: 0;
+                                        @media screen and (max-width: 768px){
+                                            padding: 25px 15px 35px 15px;
+                                            border-top-left-radius: 0;
+                                            border-top-right-radius: 0;
+                                        }
+                                        .answer{      
+                                            @include font-level-3;     
+                                            > div{
+                                                margin: 0 0 15px 0;
+                                                &:last-child{
+                                                    margin-bottom: 0;
+                                                }
+                                                p{
+                                                margin-bottom: 0!important;
+                                                width: 100%;
+                                                }                                                                           
+                                                input[type="checkbox"]{                                                    
+                                                    cursor: pointer;
+                                                    -webkit-appearance: none;
+                                                    appearance: none;             
+                                                    font: inherit;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    border: 2px solid $black;  
+                                                    margin-right: 15px;
+                                                    border-radius: 50%;
+                                                    @media screen and (max-width: 1025px){
+                                                        width: 15px;
+                                                        height: 15px;                              
+                                                    }  
+                                                    @media screen and (max-width: 768px){
+                                                        margin-right: 10px;
+                                                    }                                      
+                                                    &:checked {
+                                                        background-color: $aqua-green;
+                                                    }       
+                                                }
+                                                .answernumber{
+                                                    min-width: auto;
+                                                }
+                                            }                                            
+                                        }
+                                    }                                    
+                                }
+                                .outcome{
+                                    background-color: $gray-2;
+                                    padding: 55px 65px;
+                                    @include border-radius-2;                                    
+                                    @media screen and (max-width: 768px){
+                                        padding: 15px;
+                                    }
+                                    .feedback{
+                                        background-color: $yellow;
+                                        padding: 45px 55px;
+                                        @include border-radius-3;
+                                        margin-bottom: 0;
+                                        @media screen and (max-width: 768px){
+                                            padding: 25px 15px;
+                                        }
+                                        .specificfeedback, .rightanswer{
+                                            display: none;
+                                        }
+                                        .generalfeedback{
+                                            margin-bottom: 0;
+                                            p{
+                                                &:last-child{
+                                                    margin-bottom: 0!important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }            
+                    }                    
+                }
+            }
+        }
+    }
     // Aplica estilos cuando se desactiva el modo edición.
     &:not(.editing){
     //&.editing{
