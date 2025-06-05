@@ -1470,6 +1470,50 @@ $yellow: #FDF7BF;
                 }                   
             }
         }
+        .content-file{
+            display: none!important;
+            display: flex;
+            align-items: center;
+            background-color: $gray-2;
+            padding: 25px;
+            @include border-radius-4;
+            @media screen and (max-width: 576px){
+                padding: 20px;
+            }
+            a{
+                @include font-level-3;
+                font-weight: 700;
+                color: $aqua-green;
+                text-decoration: underline;
+                &:hover{
+                    color: $black;
+                }
+            }
+            .icon{
+                width: 35px;
+                height: 35px;
+                margin-right: 5px;
+                @media screen and (max-width: 576px){
+                    width: 22px;
+                    height: 22px;
+                    margin-right: 2px;
+                }
+            }            
+        }
+        &:last-of-type{
+            .content-file{
+                margin-bottom: 65px;
+                @media screen and (max-width: 576px){
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    #content-table-bd{
+        .content-file{
+            max-width: 800px;
+            margin: 0 auto 65px auto;
+        }        
     }
     // Aplica estilos cuando se desactiva el modo edición.
     &:not(.editing){
