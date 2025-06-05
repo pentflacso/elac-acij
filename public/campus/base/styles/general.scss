@@ -1193,7 +1193,57 @@ $yellow: #FDF7BF;
                             @media screen and (min-width: 576px){
                                 display: none;                                
                             }                       
-                        }                        
+                        }   
+                        // Two Cards Component
+                        .two-cards-component{
+                            display: flex;
+                            justify-content: space-between;
+                            max-width: 1000px;
+                            margin: 0 auto;
+                            @media screen and (max-width: 768px){
+                                flex-wrap: wrap;
+                            }
+                            div{
+                                width: 49%;
+                                background-color: $gray-2;
+                                padding: 25px;
+                                @include border-radius-2;
+                                @media screen and (max-width: 768px){
+                                    width: 100%;
+                                    margin-bottom: 25px;
+                                }
+                                @media screen and (max-width: 576px){
+                                    padding: 15px;
+                                }
+                                p{
+                                    background-color: $black;
+                                    text-align: left;
+                                    color: $white;
+                                    padding: 10px 20px;
+                                    @include border-radius-4;
+                                    @media screen and (max-width: 576px){
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                ul{
+                                    padding-left: 38px;
+                                    margin-bottom: 10px;
+                                    li{
+                                        @include font-level-3;
+                                        font-weight: 400;
+                                        line-height: 130%;
+                                        color: $black;   
+                                        margin-bottom: 20px;                                    
+                                        @media screen and (max-width: 576px){
+                                            margin-bottom: 15px;
+                                        }
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }                     
                         // Estilos botonera bases de datos
                         .stickyfooter{
                             position: static!important;
