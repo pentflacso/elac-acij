@@ -632,7 +632,8 @@ $yellow: #FDF7BF;
                         }
                     }
                     div[role=main]{
-                        max-width: 1500px;
+                        //max-width: 1500px;
+                        max-width: 1300px;
                         margin: 0 auto;
                         padding-top: 65px;
                         @media screen and (max-width: 576px){
@@ -1587,44 +1588,7 @@ $yellow: #FDF7BF;
                     }
                 }
             }
-        }
-        .content-file{
-            display: flex;
-            align-items: center;
-            background-color: $gray-2;
-            padding: 25px;
-            @include border-radius-4;
-            @media screen and (max-width: 576px){
-                padding: 20px;
-            }
-            a{
-                @include font-level-3;
-                font-weight: 700;
-                color: $aqua-green;
-                text-decoration: underline;
-                &:hover{
-                    color: $black;
-                }
-            }
-            .icon{
-                width: 35px;
-                height: 35px;
-                margin-right: 5px;
-                @media screen and (max-width: 576px){
-                    width: 22px;
-                    height: 22px;
-                    margin-right: 2px;
-                }
-            }            
-        }
-        &:last-of-type{
-            .content-file{
-                margin-bottom: 65px;
-                @media screen and (max-width: 576px){
-                    margin-bottom: 25px;
-                }
-            }
-        }
+        }        
         &.accordion-table-bd{
             max-width: 1100px;
             margin-left: auto;
@@ -1647,6 +1611,58 @@ $yellow: #FDF7BF;
                 }
             }
         }
+        &.file-type-bd{
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 10px 35px 10px;
+            border-top: 1px solid #838383;
+            @media screen and (max-width: 576px){
+                padding: 0 0 25px 0;
+            }
+            &:last-child{
+                border-bottom: 1px solid #838383;
+            }
+            .user-content-bd{
+                margin: 30px 0 20px 0; 
+                @media screen and (max-width: 576px){
+                    margin: 25px 0 15px 0; 
+                }
+            }
+            .content-file{
+                display: flex;
+                align-items: center;
+                background-color: $gray-2;
+                padding: 10px;
+                @include border-radius-4;
+                a{
+                    @include font-level-3;
+                    font-weight: 700;
+                    color: $aqua-green;
+                    text-decoration: underline;
+                    &:hover{
+                        color: $black;
+                    }
+                }
+                .icon{
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 5px;
+                    @media screen and (max-width: 576px){
+                        width: 22px;
+                        height: 22px;
+                        margin-right: 2px;
+                    }
+                }            
+            }
+        }
+        &:last-of-type{
+            &.file-type-bd{
+                margin-bottom: 65px;
+                @media screen and (max-width: 576px){
+                    margin-bottom: 25px;
+                }
+            }
+        } 
     }
     #content-table-bd{
         .content-file{
