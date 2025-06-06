@@ -941,7 +941,7 @@ $yellow: #FDF7BF;
                                             @media screen and (max-width: 576px){
                                                 padding: 15px;  
                                             }
-                                            a{
+                                            a, .autolink{
                                                 background-image: url(/campus/base/img/link-icon.svg);
                                                 background-repeat: no-repeat;
                                                 background-position: left center;
@@ -955,9 +955,13 @@ $yellow: #FDF7BF;
                                                 color: $black;
                                                 padding: 12px 0 12px 65px;
                                                 width: 100%;
+                                                cursor: pointer!important;
                                                 @media screen and (max-width: 576px){
                                                     background-size: 30px auto;
                                                     padding: 5px 0 5px 40px; 
+                                                }
+                                                &:hover{
+                                                    color: $aqua-green;
                                                 }
                                             }
                                         }
