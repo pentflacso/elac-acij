@@ -95,47 +95,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //SI estamos en la portada del curso
     if (body.classList.contains('pagelayout-course')) {
-        /*
-        if (window.innerWidth < 1200) {
-
-            let regionMainBox = document.getElementById('region-main-box');
-            let regionMain = document.getElementById('region-main');
-            let columna = document.querySelector('[data-region="blocks-column"]');
-
-            // Crear contenedor de menu
-            const contentMenu = document.createElement('div');
-            contentMenu.id = 'content-menu-column';
-
-            const overley = document.createElement('div');
-            overley.id = 'overley';
-            body.appendChild(overley);
-
-            // Crear el botón
-            const btnBlocksColumn = document.createElement('button');
-            btnBlocksColumn.id = 'btn-blocks-column';
-            btnBlocksColumn.textContent = 'Mas Info';
-
-            contentMenu.appendChild(btnBlocksColumn);
-            contentMenu.appendChild(columna);
-            body.appendChild(contentMenu);
-
-            btnBlocksColumn.addEventListener('click', function() {
-                body.classList.toggle('active-menu-column');
-
-                setTimeout(function() {
-                    overley.classList.toggle('visible');
-                    contentMenu.classList.toggle('active');
-                    btnBlocksColumn.classList.toggle('active');
-                }, 1);
-            });
-
-        }
-        */    
-
         /**
          * Función para colapsar todas las secciones del curso excepto la primera válida
          */
 
+        if (document.body.classList.contains('editing')) return;
+        
         const allSections = document.querySelectorAll('ul.topics li.course-section');
 
         let firstValidSection = null;
@@ -188,6 +153,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     }else{
+        // Si hay entradas nuevas, redirecciona para agregar una nueva entrada
+        newEntries();
+
         const breadcrumb = document.querySelector('.breadcrumb');
 
         if (breadcrumb) {
@@ -309,7 +277,11 @@ document.addEventListener("DOMContentLoaded", function() {
         
     }
 
-
+    /**
+     * @returns Reorganiza las tarjetas dentro de la base de datos
+     * y las coloca en el contenedor accordeón correspondiente según su clase.
+     * 
+     */
     function accordionCardBd(){
         // 1. Verificar si el body tiene el ID correcto
         if (document.body.id !== 'page-mod-data-view') return;
@@ -388,5 +360,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 title.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
+    }
+
+    /**
+     * Función para verificar si hay entradas nuevas en la base de datos
+     * @returns Si hay entradas nuevas, redirecciona para agregar una nueva entrada
+     * Verifica existe el templete de "empty-message"
+     * busca formularios dentro de los divs con clase "singlebutton"
+     * Si encuentra un formulario con la acción que termina en "/edit.php", lo envía.
+     */
+    function newEntries() {
+        // Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-data-view') return;
+
+        // Verificar si existe el mensaje de "empty-message"
+        const emptyMessage = document.querySelector('div[data-region="empty-message"]');
+        if (!emptyMessage) return;
+
+        // Buscar formularios dentro de los divs con clase "singlebutton"
+        const singleButtons = document.querySelectorAll('div[data-region="empty-message"] .singlebutton form');
+
+        for (const form of singleButtons) {
+            if (form.action.endsWith('/edit.php')) {
+                form.submit();
+                return;
+            }
+        }
     }
 });
