@@ -1193,6 +1193,11 @@ $yellow: #FDF7BF;
                                 height: 115.4%;
                             }                                      
                         }
+                        // Limita el ancho del Genially
+                        .genially-width-limit{
+                            max-width: 650px;
+                            margin: 0 auto;
+                        }
                         // Image Component
                         .image-component{
                             display: flex;
