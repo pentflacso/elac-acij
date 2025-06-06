@@ -350,6 +350,9 @@ $yellow: #FDF7BF;
                     .secondary-navigation{
                         display: none!important;
                     }
+                    .drawer-toggles .drawer-toggler{
+                        display: none!important;
+                    }
                 }
             }
         }
@@ -1848,7 +1851,7 @@ $yellow: #FDF7BF;
                         }
                     }                    
                 }
-                .drawer-toggles{
+                .drawer-toggles .drawer-toggler{
                     display: none!important;
                 }
             }
