@@ -1848,6 +1848,9 @@ $yellow: #FDF7BF;
                         }
                     }                    
                 }
+                .drawer-toggles{
+                    display: none!important;
+                }
             }
         }
         &:not(.path-mod-data, .path-mod-quiz){   
