@@ -627,6 +627,9 @@ $yellow: #FDF7BF;
                                 }                                    
                             }
                         }
+                        .activity-information{
+                            display: none;
+                        }
                     }
                     div[role=main]{
                         max-width: 1500px;
