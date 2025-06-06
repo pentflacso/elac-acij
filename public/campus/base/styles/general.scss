@@ -1034,6 +1034,9 @@ $yellow: #FDF7BF;
                                             min-height: 120px;
                                             border-radius: 0;
                                             border-color: $gray-1;
+                                            @include font-level-3;
+                                            font-weight: 400;
+                                            color: $black;
                                             @media screen and (max-width: 576px){
                                                 min-height: 100px;
                                             } 
