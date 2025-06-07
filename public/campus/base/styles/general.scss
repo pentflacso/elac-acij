@@ -1899,6 +1899,10 @@ $yellow: #FDF7BF;
     // Aplica estilos cuando se desactiva el modo edición.
     &:not(.editing){
     //&.editing{
+        .drawer-left, .drawer-right
+        {
+            display: none !important;
+        }
         #page{
             .main-inner{
                 #page-header, .secondary-navigation{
@@ -1914,6 +1918,11 @@ $yellow: #FDF7BF;
                 .drawer-toggles, .drawer-toggles .drawer-toggler{
                     display: none!important;
                 }
+            }
+            &.show-drawer-left,&.show-drawer-right
+            {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
         }
         &:not(.path-mod-data, .path-mod-quiz){   

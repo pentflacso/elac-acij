@@ -122,8 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const content = section.querySelector('.course-content-item-content');
             const link = section.querySelector('a.icons-collapse-expand');
-
-            if (section === firstValidSection) {
+            if (section === firstValidSection || section.id == "section-0") {
                 // Expandir la primera sección válida
                 if (content) content.classList.add('show');
 
