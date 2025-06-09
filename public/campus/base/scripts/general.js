@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const firstBreadcrumbItem = breadcrumb.querySelector('li.breadcrumb-item a');
 
             if (firstBreadcrumbItem) {
-                const href = firstBreadcrumbItem.getAttribute('href');
+                let href = firstBreadcrumbItem.getAttribute('href');
                 const title = firstBreadcrumbItem.getAttribute('title');
 
                 // 2. Crear el nuevo elemento <div class="back"><a ...>← Volver</a></div>
