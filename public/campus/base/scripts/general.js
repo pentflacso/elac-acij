@@ -246,6 +246,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
+        // Obtener el valor del parámetro "mode" en la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const mode = urlParams.get('mode');
+        
         // 2. Verifica si existe el contenedor del sticky footer
         const stickyFooter = document.querySelector('#page-mod-data-view #sticky-footer');
 
@@ -265,15 +269,50 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Agregar el nuevo enlace al final del navitem
                     item.appendChild(avanzarLink);
 
+                    //Si la BD de la libreta es de modo "single"
+                    if(mode == 'single' && text_btn_new_entry == 'Agregar nota') {
+                        const d = urlParams.get('d');
+
+                        let seeAllUrl = window.location.origin + window.location.pathname;
+
+                        if (d) {
+                            seeAllUrl += `?d=${encodeURIComponent(d)}`;
+                        }
+                        
+                        const seeAllBtn = document.createElement('a');
+                        seeAllBtn.href = seeAllUrl;
+                        seeAllBtn.textContent = 'Ver todo';
+                        seeAllBtn.className = 'btn btn-secondary'; 
+
+                        item.insertBefore(seeAllBtn, item.firstChild);
+                    }
+
                     // Buscar un <a> con clase "btn-primary" y cambiar su texto
                     const btnPrimary = item.querySelector('a.btn-primary');
                     if (btnPrimary) {
                         btnPrimary.textContent = text_btn_new_entry;
                     }
+
+                }else{                 
+                    /**
+                     * Si existe en el body la clase "bd-sv-pagination-none"
+                     * y el modo es "single", ocultar paginación
+                    */
+
+                    if (!document.body.classList.contains('bd-sv-pagination-none')) return;
+                    if (document.body.classList.contains('editing')) return;
+
+                    if (mode !== 'single') return;
+
+                    const pagination = item.querySelectorAll('nav.pagination');
+
+                    //Display none si no hay paginación
+                    if (pagination.length > 0) {
+                        item.style.display = 'none';
+                    }
                 }
             });
-        }
-        
+        }     
     }
 
     /**
