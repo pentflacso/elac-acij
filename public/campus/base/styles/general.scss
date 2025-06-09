@@ -1104,6 +1104,20 @@ $yellow: #FDF7BF;
                                         }
                                     }                                    
                                 }
+                                .date{
+                                    width: fit-content;                                
+                                    @include font-level-3;                                    
+                                    font-weight: 600;
+                                    color: #636363;
+                                    margin: 25px auto;
+                                    padding: 6px 15px;
+                                    background-color: $white;
+                                    @include border-radius-4;
+                                    @media screen and (max-width: 576px){
+                                        margin: 15px auto;
+                                        padding: 5px 10px;
+                                    }
+                                }
                             }                            
                         } 
                         // Mail Component
