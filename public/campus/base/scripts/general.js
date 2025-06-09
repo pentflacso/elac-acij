@@ -169,7 +169,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 backDiv.className = 'back';
 
                 const backLink = document.createElement('a');
+                href = href.split('#')[0];
+
                 backLink.href = href;
+
                 backLink.title = title;
                 backLink.textContent = 'Volver';
 
