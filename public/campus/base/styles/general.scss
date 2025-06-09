@@ -1763,6 +1763,7 @@ $yellow: #FDF7BF;
             .main-inner{
                 #page-content{
                     div[role=main]{
+                        min-height: 50vh;
                         padding-top: 0!important;       
                         max-width: 1200px!important;      
                         .btn-primary{
