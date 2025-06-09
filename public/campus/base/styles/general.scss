@@ -502,25 +502,23 @@ $yellow: #FDF7BF;
                                     a{
                                         display: flex;
                                         align-items: center;
+                                        gap: 15px;
                                         @include font-level-3;
                                         font-weight: 700;
                                         color: $black;                                        
                                         @include border-radius-4;
                                         text-decoration: none;
-                                        &:nth-child(1){
-                                            margin-right: 15px;
-                                            border: 2px solid $gray-2;
-                                            padding: 10px 20px;
-                                            @media screen and (max-width: 576px){
-                                                margin-right: 10px;
-                                            }
-                                            &:hover{
-                                                background-color: $black;
-                                                color: $white;
-                                                border: 2px solid $black;
-                                            }
+                                        border: 2px solid $gray-2;
+                                        padding: 10px 20px;
+                                        @media screen and (max-width: 576px){
+                                            gap: 10px;
                                         }
-                                        &:nth-child(2){
+                                        &:hover{
+                                            background-color: $black;
+                                            color: $white;
+                                            border: 2px solid $black;
+                                        }
+                                        &:last-child{
                                             background-color: $yellow;    
                                             background-image: url(/campus/base/img/libreta-icon.svg);
                                             background-repeat: no-repeat;
@@ -531,6 +529,7 @@ $yellow: #FDF7BF;
                                                 background-color: $black;
                                                 background-image: url(/campus/base/img/libreta-white-icon.svg);
                                                 color: $white;
+                                                border: none;
                                             }                                      
                                         }
                                     }
