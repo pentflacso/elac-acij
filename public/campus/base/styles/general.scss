@@ -2080,6 +2080,7 @@ $yellow: #FDF7BF;
                                             }
                                         }
                                     }
+                                    
                                     .box{
                                         display: flex;
                                         flex-wrap: wrap;
@@ -2132,6 +2133,9 @@ $yellow: #FDF7BF;
                                         }
                                             
                                         
+                                    }
+                                    #data-singleview-content .post-it{
+                                        width: 100% !important;
                                     }
                                 }
                             }                        
