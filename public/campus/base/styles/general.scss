@@ -489,55 +489,54 @@ $yellow: #FDF7BF;
                     .course-section-header{
                         display: none!important;                         
                     }
-                    .course-content-item-content{
-                        .description{
-                            margin: 0!important;  
-                            .summarytext{
-                                margin-top: 0!important;  
-                                width: 100%;
-                                max-width: 100%;
-                                div{
+                    .description{
+                        margin: 0!important;  
+                        .summarytext{
+                            margin-top: 0!important;  
+                            width: 100%;
+                            max-width: 100%;
+                            div{
+                                display: flex;
+                                justify-content: end;
+                                a{
                                     display: flex;
-                                    justify-content: end;
-                                    a{
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 15px;
-                                        @include font-level-3;
-                                        font-weight: 700;
-                                        color: $black;                                        
-                                        @include border-radius-4;
-                                        text-decoration: none;
-                                        border: 2px solid $gray-2;
-                                        padding: 10px 20px;
-                                        @media screen and (max-width: 576px){
-                                            gap: 10px;
-                                        }
+                                    align-items: center;
+                                    gap: 15px;
+                                    @include font-level-3;
+                                    font-weight: 700;
+                                    color: $black;                                        
+                                    @include border-radius-4;
+                                    text-decoration: none;
+                                    border: 2px solid $gray-2;
+                                    padding: 10px 20px;
+                                    @media screen and (max-width: 576px){
+                                        gap: 10px;
+                                    }
+                                    &:hover{
+                                        background-color: $black;
+                                        color: $white;
+                                        border: 2px solid $black;
+                                    }
+                                    &:last-child{
+                                        background-color: $yellow;    
+                                        background-image: url(/campus/base/img/libreta-icon.svg);
+                                        background-repeat: no-repeat;
+                                        background-position: left 15px center;
+                                        background-size: 22px auto;  
+                                        padding: 10px 20px 10px 45px;
+                                        border: none;
                                         &:hover{
                                             background-color: $black;
+                                            background-image: url(/campus/base/img/libreta-white-icon.svg);
                                             color: $white;
-                                            border: 2px solid $black;
-                                        }
-                                        &:last-child{
-                                            background-color: $yellow;    
-                                            background-image: url(/campus/base/img/libreta-icon.svg);
-                                            background-repeat: no-repeat;
-                                            background-position: left 15px center;
-                                            background-size: 22px auto;  
-                                            padding: 10px 20px 10px 45px;
                                             border: none;
-                                            &:hover{
-                                                background-color: $black;
-                                                background-image: url(/campus/base/img/libreta-white-icon.svg);
-                                                color: $white;
-                                                border: none;
-                                            }                                      
-                                        }
+                                        }                                      
                                     }
                                 }
                             }
                         }
-                    }                    
+                    }
+                                    
                 }
                 // Separadores                                
                 li.section.section-divider{
