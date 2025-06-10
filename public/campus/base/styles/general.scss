@@ -2093,7 +2093,7 @@ $yellow: #FDF7BF;
                                             width: 48%;
                                             height: fit-content;
                                             padding: 25px 45px 45px 45px;
-                                            margin-bottom: 4%;
+                                            margin: 0 auto 4% auto;
                                             @media screen and (max-width: 768px){
                                                 width: 100%;
                                                 margin-bottom: 35px;
@@ -2134,9 +2134,7 @@ $yellow: #FDF7BF;
                                             
                                         
                                     }
-                                    #data-singleview-content .post-it{
-                                        width: 100% !important;
-                                    }
+                                    
                                 }
                             }                        
                         }
