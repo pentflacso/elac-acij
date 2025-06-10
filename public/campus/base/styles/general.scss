@@ -2026,7 +2026,7 @@ $yellow: #FDF7BF;
             }
         }        
         // Estilos libreta
-        &:not(.base-libreta)
+        &not(.editing):not(.base-libreta)
         {
             .action-menu-trigger
             {
