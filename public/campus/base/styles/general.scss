@@ -2028,7 +2028,7 @@ $yellow: #FDF7BF;
         // Estilos libreta
         &not(.editing):not(.base-libreta)
         {
-            .action-menu-trigger
+            .menu-action
             {
                 display: none;
             }
