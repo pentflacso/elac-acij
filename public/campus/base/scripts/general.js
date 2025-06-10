@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Obtener el valor del parámetro "mode" en la URL
         const urlParams = new URLSearchParams(window.location.search);
-        const mode = urlParams.get('mode');
+        const mode = urlParams.get('mode') == 'single' || urlParams.get('rid')  ? 'single' : 'list';
         
         // 2. Verifica si existe el contenedor del sticky footer
         const stickyFooter = document.querySelector('#page-mod-data-view #sticky-footer');
