@@ -1868,7 +1868,7 @@ $yellow: #FDF7BF;
                                                     height: 20px;
                                                     border: 2px solid $black;  
                                                     margin-right: 15px;
-                                                    border-radius: 50%;
+                                                    border-radius: 0;
                                                     @media screen and (max-width: 1025px){
                                                         width: 15px;
                                                         height: 15px;                              
@@ -1983,7 +1983,7 @@ $yellow: #FDF7BF;
     // Aplica estilos cuando se desactiva el modo edición.
     &:not(.editing){
     //&.editing{
-        .drawer-left, .drawer-right
+        .drawer-left, .drawer-right, .drawer
         {
             display: none !important;
         }
