@@ -140,6 +140,18 @@ $yellow: #FDF7BF;
 
 #page-course-view-topics
 {
+    &:not(.editing){
+        //&.editing{
+        .drawer-left, .drawer-right, .drawer
+        {
+            display: none !important;
+        }
+        #page.show-drawer-left,#page.show-drawer-right
+        {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
     #page-wrapper{
         #page{
             padding: 0;
@@ -2026,7 +2038,7 @@ $yellow: #FDF7BF;
             }
         }        
         // Estilos libreta
-        &not(.editing):not(.base-libreta)
+        &:not(.editing):not(.base-libreta)
         {
             .menu-action
             {
