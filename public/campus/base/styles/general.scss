@@ -1819,6 +1819,9 @@ $yellow: #FDF7BF;
                         .btn-secondary{
                             @include button(secondary);  
                         }
+                        .quizreviewsummary{
+                            display: none;
+                        }
                         .quizinfo{
                             display: none;
                             margin-top: 30px;
