@@ -152,6 +152,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     }else{
+        newQuiz();
+        
+        finishQuiz();
+        
+        quizInputCheck();
+        
         // Si hay entradas nuevas, redirecciona para agregar una nueva entrada
         newEntries();
 
@@ -427,5 +433,85 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
         }
+    }
+
+
+    function newQuiz() {
+        if (document.body.classList.contains('editing')) return;
+        // Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-quiz-view') return;
+        
+        const tableQuizSummary = document.querySelector('.quizattemptsummary');
+        
+        if (tableQuizSummary) return;
+        
+        // Verificar si existe el formulario con la clase "quizstartbuttondiv"
+        const formReadyForm = document.querySelector('.quizstartbuttondiv form');
+
+        if (!formReadyForm) return;
+
+        formReadyForm.submit();
+    }
+    
+    function finishQuiz() {
+        if (document.body.classList.contains('editing')) return;
+        // Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-quiz-summary') return;
+        // Verificar si existe el botón de finalizar el cuestionario
+        const finishFrom = document.querySelector('#frm-finishattempt');
+        
+        finishFrom.submit();      
+    }
+
+    function quizInputCheck(){
+        if (document.body.classList.contains('editing')) return;
+        // Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-quiz-attempt') return;
+
+        const form = document.querySelector('#responseform');
+        const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+        const submitButton = form.querySelector('.submitbtns input#mod_quiz-next-nav');
+
+        if (!form || checkboxes.length === 0 || !submitButton) return;
+
+        verificarCheckboxes(checkboxes, submitButton, form);
+
+        // Agregar listeners a todos los checkboxes
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                verificarCheckboxes(checkboxes, submitButton, form);
+            });
+        });
+    }
+
+    // Función para verificar si hay al menos un checkbox seleccionado
+    function verificarCheckboxes(checkboxes, submitButton, form) {
+        const algunoSeleccionado = Array.from(checkboxes).some(cb => cb.checked);
+        let msj = document.querySelector('.alert-checkbox');
+
+        if (algunoSeleccionado) {
+            submitButton.disabled = false;
+            submitButton.classList.remove('btn-secondary');
+            submitButton.classList.add('btn-primary');
+            
+            // Si ya existe el mensaje, eliminarlo
+            if(msj){
+                form.removeChild(msj);
+            }
+
+        } else {
+            submitButton.disabled = true;
+            submitButton.classList.remove('btn-primary');
+            submitButton.classList.add('btn-secondary');
+        }
+
+        // Si el formulario existe y no hay checkboxes seleccionados, mostrar mensaje
+        if(form && algunoSeleccionado) return;
+
+        const divInfo = document.createElement('div');
+        divInfo.className = 'alert alert-danger alert-block fade in alert-dismissible alert-checkbox';
+        divInfo.textContent = 'Por favor, selecciona al menos una opción antes de continuar.';
+
+        form.insertBefore(divInfo, form.firstChild);    
     }
 });
