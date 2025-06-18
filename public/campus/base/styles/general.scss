@@ -698,6 +698,29 @@ $yellow: #FDF7BF;
                                     }                                
                                 }                                    
                             }
+                            .custom-btns{
+                                display: flex;   
+                                justify-content: center;      
+                                margin-top: 45px;  
+                                padding: 10px 0;     
+                                @media screen and (max-width: 576px){                            
+                                    flex-direction: column;
+                                    align-items: center;
+                                    margin-top: 30px; 
+                                }           
+                                a{
+                                    width: fit-content;
+                                    @include button(secondary);
+                                    margin-left: 15px;
+                                    @media screen and (max-width: 576px){
+                                        margin: 10px 0 0 0;
+                                    }
+                                    &:first-child{
+                                        @include button(primary);
+                                        margin-left: 0;
+                                    }
+                                }                         
+                            }
                         }
                         .activity-information{
                             display: none;
@@ -1797,18 +1820,35 @@ $yellow: #FDF7BF;
                             @include button(secondary);  
                         }
                         .quizinfo{
+                            display: none;
                             margin-top: 30px;
                             p{
                                 max-width: 100%!important;
                             }
                         }
                         .quizattemptcounts{
+                            display: none;
                             margin-bottom: 25px;
                             a{
                                 @include font-level-3;
                             }
                         }
+                        .table-responsive{
+                            display: none;
+                        }
+                        .quizattempt{
+                            display: none;
+                        }
+                        .quizstartbuttondiv{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            .btn-primary{
+                                @include button(secondary); 
+                            }
+                        }
                         h3{
+                            display: none;
                             @include font-level-2;
                         }
                         .multichoice{
@@ -1880,7 +1920,7 @@ $yellow: #FDF7BF;
                                                     height: 20px;
                                                     border: 2px solid $black;  
                                                     margin-right: 15px;
-                                                    border-radius: 0;
+                                                    border-radius: 50%;
                                                     @media screen and (max-width: 1025px){
                                                         width: 15px;
                                                         height: 15px;                              
@@ -1895,14 +1935,14 @@ $yellow: #FDF7BF;
                                                 .answernumber{
                                                     min-width: auto;
                                                 }
-                                                .icon{
-                                                    font-size: 24px;
-                                                    width: 24px;
-                                                    height: 24px;
-                                                }
                                             }                                            
                                         }
-                                    }                                    
+                                    } 
+                                    .im-controls{
+                                        .submit.btn.btn-secondary{
+                                            @include button(primary); 
+                                        }
+                                    }                                   
                                 }
                                 .outcome{
                                     background-color: $gray-2;
@@ -1932,6 +1972,11 @@ $yellow: #FDF7BF;
                                         }
                                     }
                                 }
+                            }
+                        }
+                        .submitbtns{
+                            .mod_quiz-next-nav{
+                                @include button(secondary);  
                             }
                         }
                         .quizattemptsummary{
