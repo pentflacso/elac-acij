@@ -158,6 +158,8 @@ document.addEventListener("DOMContentLoaded", function() {
         
         quizInputCheck();
         
+        reviewQuiz();
+
         // Si hay entradas nuevas, redirecciona para agregar una nueva entrada
         newEntries();
 
@@ -461,6 +463,17 @@ document.addEventListener("DOMContentLoaded", function() {
         const finishFrom = document.querySelector('#frm-finishattempt');
         
         finishFrom.submit();      
+    }
+
+
+    function reviewQuiz() {
+        if (document.body.classList.contains('editing')) return;
+        // Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-quiz-review') return;
+        // Verificar si existe el botón de finalizar el cuestionario
+        const finishReview = document.querySelector('.submitbtns .mod_quiz-next-nav');
+        
+        if (finishReview) finishReview.click();
     }
 
     function quizInputCheck(){
