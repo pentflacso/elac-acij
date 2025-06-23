@@ -1444,59 +1444,61 @@ $yellow: #FDF7BF;
         }
     }   
     // Estilos Pop-up
-    .moodle-dialogue-base{
-        .moodle-dialogue{
-            position: fixed;  
-            width: 100%!important;
-            top: 0!important;
-            bottom: 0!important;
-            left: 0!important;
-            right: 0!important;  
-            background-color: $gray-2!important;
-            overflow-y: scroll;
-            .moodle-dialogue-wrap.moodle-dialogue-content{
-                position: absolute!important;
+    &.path-mod-page{
+        .moodle-dialogue-base{
+            .moodle-dialogue{
+                position: fixed;  
+                width: 100%!important;
+                top: 0!important;
+                bottom: 0!important;
                 left: 0!important;
-                right: 0!important;
-                margin: 0 auto!important;
-                max-width: 900px!important;
-                border: none!important;
-                background-color: transparent!important;
-                padding: 45px 0!important;
-                @media screen and (max-width: 576px){
-                    padding: 15px 0!important;
-                } 
-                .moodle-dialogue-hd{
-                    display: none!important;
-                }
-                .moodle-dialogue-bd{
-                    .confirmation-dialogue{
-                        display: flex!important;
-                        flex-wrap: wrap!important;
-                        flex-direction: column-reverse!important;
-                        .confirmation-message{
-                            width: 100%!important;
-                            img{
+                right: 0!important;  
+                background-color: $gray-2!important;
+                overflow-y: scroll;
+                .moodle-dialogue-wrap.moodle-dialogue-content{
+                    position: absolute!important;
+                    left: 0!important;
+                    right: 0!important;
+                    margin: 0 auto!important;
+                    max-width: 900px!important;
+                    border: none!important;
+                    background-color: transparent!important;
+                    padding: 45px 0!important;
+                    @media screen and (max-width: 576px){
+                        padding: 15px 0!important;
+                    } 
+                    .moodle-dialogue-hd{
+                        display: none!important;
+                    }
+                    .moodle-dialogue-bd{
+                        .confirmation-dialogue{
+                            display: flex!important;
+                            flex-wrap: wrap!important;
+                            flex-direction: column-reverse!important;
+                            .confirmation-message{
                                 width: 100%!important;
-                                height: auto!important;
-                            }                    
-                        }
-                        .confirmation-buttons{
-                            width: 100%!important;
-                            text-align: right!important;
-                            margin-bottom: 20px!important;
-                            @media screen and (max-width: 576px){
-                                margin-bottom: 5px!important;
-                            } 
-                            .btn-primary{
-                                @include button(primary);
+                                img{
+                                    width: 100%!important;
+                                    height: auto!important;
+                                }                    
                             }
-                        } 
-                    }                   
-                }                
-            }
-        }      
-    }
+                            .confirmation-buttons{
+                                width: 100%!important;
+                                text-align: right!important;
+                                margin-bottom: 20px!important;
+                                @media screen and (max-width: 576px){
+                                    margin-bottom: 5px!important;
+                                } 
+                                .btn-primary{
+                                    @include button(primary);
+                                }
+                            } 
+                        }                   
+                    }                
+                }
+            }      
+        }
+    }    
     // Estilos específicos BD
     &.path-mod-data{
         #page{
@@ -2201,11 +2203,8 @@ $yellow: #FDF7BF;
                                                 width: 100%;
                                                 margin-bottom: 20px;
                                             }                                                
-                                        }
-                                            
-                                        
-                                    }
-                                    
+                                        }                                                  
+                                    }  
                                 }
                             }                        
                         }
