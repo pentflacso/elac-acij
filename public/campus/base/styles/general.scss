@@ -2220,6 +2220,12 @@ $yellow: #FDF7BF;
         display: none!important;
     }
     div[role=main]{
+        .box{
+            display: block;
+            .post-it{
+                width: 100%;
+            }
+        }
         h2:first-of-type{
             display: none;
         }
