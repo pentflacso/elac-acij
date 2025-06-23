@@ -2221,9 +2221,9 @@ $yellow: #FDF7BF;
     }
     div[role=main]{
         .box{
-            display: block;
+            display: block!important;
             .post-it{
-                width: 100%;
+                width: 100%!important;
             }
         }
         h2:first-of-type{
