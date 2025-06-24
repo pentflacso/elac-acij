@@ -1465,7 +1465,7 @@ $yellow: #FDF7BF;
                     background-color: transparent!important;
                     padding: 45px 0!important;
                     @media screen and (max-width: 576px){
-                        padding: 15px 0!important;
+                        padding: 55px 0!important;
                     } 
                     .moodle-dialogue-hd{
                         display: none!important;
@@ -1483,14 +1483,46 @@ $yellow: #FDF7BF;
                                 }                    
                             }
                             .confirmation-buttons{
-                                width: 100%!important;
-                                text-align: right!important;
-                                margin-bottom: 20px!important;
+                                position: fixed;
+                                top: 20px;
+                                right: 40px;
                                 @media screen and (max-width: 576px){
-                                    margin-bottom: 5px!important;
+                                    top: 15px;
+                                    right: 15px;
                                 } 
                                 .btn-primary{
-                                    @include button(primary);
+                                    background-image: url(/campus/base/img/close_icon.svg);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 25px auto;
+                                    width: 50px;
+                                    height: 50px;
+                                    min-width: 0;
+                                    font-size: 0;
+                                    color: transparent;                                    
+                                    text-decoration: none;
+                                    padding: 0;
+                                    border-radius: 50px;
+                                    transition: all .1s ease-out;
+                                    transform: scale(1);   
+                                    border: none;
+                                    @media screen and (max-width: 576px){
+                                        background-size: 18px auto;
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+                                    &:focus{
+                                        box-shadow: none;
+                                        outline: 3px solid $aqua-green;
+                                        outline-offset: 4px;
+                                    }
+                                    &:hover{
+                                        background-color: $black;   
+                                        outline: 2px solid transparent; 
+                                    } 
+                                    &:active{
+                                        transform: scale(.95);  
+                                    }
                                 }
                             } 
                         }                   
