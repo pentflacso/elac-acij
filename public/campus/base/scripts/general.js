@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 backLink.href = href;
 
                 backLink.title = title;
-                backLink.textContent = 'Volver';
+                backLink.textContent = 'Recorrido';
 
                 backDiv.appendChild(backLink);
 
