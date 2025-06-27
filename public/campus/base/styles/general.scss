@@ -2145,13 +2145,6 @@ $yellow: #FDF7BF;
             }
         }        
         // Estilos libreta
-        &:not(.editing):not(.base-libreta)
-        {
-            .menu-action
-            {
-                display: none;
-            }
-        }
         &.base-libreta{
             #page-wrapper{
                 #page{                
