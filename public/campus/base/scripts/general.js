@@ -211,6 +211,9 @@ document.addEventListener("DOMContentLoaded", function() {
          * y colocarlas en el contenedor correspondiente según su clase.
          */
         accordionCardBd();
+
+
+        accordionWhatsAppBd();
     }
 
 
@@ -396,6 +399,102 @@ document.addEventListener("DOMContentLoaded", function() {
                 allContentCards.forEach(otherCard => {
                     const otherTitle = otherCard.querySelector('.title-card-bd');
                     const otherContent = otherCard.querySelector('.collapse-bd');
+                    if (otherContent && otherTitle) {
+                        otherContent.classList.remove('show');
+                        otherTitle.classList.remove('icon-collapse');
+                    }
+                });
+
+                // Expandir solo el clickeado
+                content.classList.add('show');
+                title.classList.add('icon-collapse');
+
+                title.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    }
+
+
+    /**
+     * @returns Reorganiza las tarjetas dentro de la base de datos
+     * y las coloca en el contenedor accordeón correspondiente según su clase.
+     * 
+     */
+    function accordionWhatsAppBd(){
+        // 1. Verificar si el body tiene el ID correcto
+        if (document.body.id !== 'page-mod-data-view') return;
+        // 2. Verificar si existe el contenedor de la tabla acordeón
+        const accordionContainer = document.querySelector('.accordion-whatsapp');
+        
+        // 3. Si no existe, salir de la función
+        if (!accordionContainer) return;
+        
+        // 4. Seleccionar todas las tarjetas dentro de la BD
+        const cards = document.querySelectorAll('.message-row');
+        
+        //Contador para alternar entre left y right
+        let counter = 0;
+
+        cards.forEach(card => {
+            // 5. Buscar la clase que sigue el patrón "C1", "C2", etc.
+            const classList = Array.from(card.classList);
+            const matchClass = classList.find(cls => /^C\d+$/.test(cls)); 
+
+            // 6. Si se encuentra una clase que coincide, buscar el contenedor correspondiente
+            if (matchClass) {
+                const contentCard = document.querySelector(`.whatsapp-component[data-collect="${matchClass}"]`);
+                
+                const targetCollapse = contentCard.querySelector('.wrapper-messages');
+                
+                if (targetCollapse) {
+                    // 8. Alternar la clase en el div.message-card
+                    const messageCard = card.querySelector('.message-card');
+                    if (messageCard) {
+                        messageCard.classList.add(counter % 2 === 0 ? 'left' : 'right');
+                        counter++;
+                    }
+
+                    // 9. Agregar la card al contenedor
+                    targetCollapse.appendChild(card);
+                }     
+            }
+        });
+
+        // 4. Comportamiento del acordeón exclusivo
+        const allContentCards = document.querySelectorAll('.whatsapp-component');
+
+        allContentCards.forEach((card, index) => {
+            const title = card.querySelector('.title-card-bd');
+            const content = card.querySelector('.wrapper-messages');
+
+            if (!title || !content) return;
+
+            // Estado inicial: el primero colapsado, el resto abiertos
+            if (index === 0) {
+                content.classList.add('show');
+                title.classList.add('icon-collapse');
+            } else {
+                content.classList.remove('show');
+                title.classList.remove('icon-collapse');
+            }
+
+            // Agregar evento de clic
+            title.addEventListener('click', () => {
+
+                const isOpen = content.classList.contains('show');
+
+                // Si ya está abierto, contraer y al resto no hacer nada
+                if(isOpen){
+                    // Si ya está abierto, colapsar
+                    content.classList.remove('show');
+                    title.classList.remove('icon-collapse');
+                    return;
+                }
+
+                // Contraer todos
+                allContentCards.forEach(otherCard => {
+                    const otherTitle = otherCard.querySelector('.title-card-bd');
+                    const otherContent = otherCard.querySelector('.wrapper-messages');
                     if (otherContent && otherTitle) {
                         otherContent.classList.remove('show');
                         otherTitle.classList.remove('icon-collapse');
