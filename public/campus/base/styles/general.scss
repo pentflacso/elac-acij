@@ -956,7 +956,7 @@ $yellow: #FDF7BF;
                             }
                         }
                         // WhatsApp Component
-                        .whatsapp-component{                            
+                        .whatsapp-component{
                             .wrapper-messages{
                                 background-color: $gray-2;                                       
                                 padding: 45px 65px;
@@ -1178,6 +1178,51 @@ $yellow: #FDF7BF;
                                 }
                             }                            
                         } 
+
+                        // Accordion WhatsApp Component
+                        .accordion-whatsapp{ 
+                            .whatsapp-component{
+                                .wrapper-messages{
+                                    @include border-radius-4;
+                                }
+                                .title-card-bd{
+                                    width: 100%;
+                                    background-color: $black;
+                                    @include font-level-2;
+                                    color: $white;
+                                    text-align: center;
+                                    @include border-radius-4;
+                                    margin: 0;
+                                    background-image: url(/campus/base/img/dropdown-icon.png);
+                                    background-repeat: no-repeat;                     
+                                    background-size: 35px auto;
+                                    background-position: right 15px top 15px;
+                                    text-align: left!important;
+                                    font-weight: 400;
+                                    line-height: 130%;
+                                    padding: 20px 20% 20px 40px;
+                                    margin-bottom: 30px;
+
+                                    cursor: pointer;
+                                    &.icon-collapse{
+                                        background-image: url(/campus/base/img/dropdown-collapse-icon.png);
+                                    }
+
+                                    span{
+                                        max-width: 900px;
+                                    }
+                                
+                                    @media screen and (max-width: 768px){
+                                        padding: 20px 15px;
+                                        text-align: left;
+                                    } 
+                                    @media screen and (max-width: 576px){
+                                        padding: 20px 20% 20px 15px;
+                                        text-align: left;
+                                    } 
+                                }
+                            }
+                        }
                         // Mail Component
                         .mail-component{
                             padding: 60px;

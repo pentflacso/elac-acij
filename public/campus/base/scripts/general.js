@@ -241,6 +241,13 @@ document.addEventListener("DOMContentLoaded", function() {
     /**
      * Función para agregar un enlace "Avanzar" al sticky footer en la página de vista de datos
      * y cambiar el texto del botón "Agregar nota" a "Escribir" si es necesario.
+     * 
+     * Si el body tiene el Clase "base-libreta" y mode es "single",
+     * Incorpora un botón "Ver todo" que redirige a la vista de todas las notas.
+     * 
+     * Si el mode es "single" y el body tiene la clase "bd-sv-pagination-none"
+     * oculta la paginación.
+     * 
      */
 
     function stickyFooter(breadcrumb) {
