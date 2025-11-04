@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Verificar si el body tiene la clase "editing"
-    /* if (!document.body.classList.contains("editing")) {
+    if (!document.body.classList.contains("editing")) {
         return;
-    } */
+    }
 
     // Crear el switch de modo dev
     const devSwitchContainer = document.createElement("div");
