@@ -213,8 +213,8 @@ $yellow: #FDF7BF;
                     padding: 25px 20px 25px 20px;
                 }
                 .section-item{
-                        border: none;
-                }
+                        border: none !important;
+                }               
                 .course-section-header{
                     .sectionname{
                         @include font-level-1;
@@ -373,7 +373,7 @@ $yellow: #FDF7BF;
         }
         #page-content{                 
             ul.topics{
-                .section{                    
+                .section{                                        
                     .course-section-header{
                         .sectionbadges{
                             display: none!important;
@@ -384,11 +384,13 @@ $yellow: #FDF7BF;
                         .sectionname{
                             @include font-level-1;
                             font-weight: 700;
-                            color: $black;
+                            color: $black; 
+                            .aalink{
                             pointer-events: none;
                             cursor: default;       /* Cursor normal de texto */
                             text-decoration: none; /* Opcional: que no parezca link */
                             color: inherit;
+                            }                           
                         }
                         div{
                             position: relative;
