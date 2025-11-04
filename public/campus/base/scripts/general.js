@@ -15,20 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Verificar si el body tiene la clase "editing"
-    /* if (!document.body.classList.contains("editing")) {
+    if (!document.body.classList.contains("editing")) {
         return;
-    } */
-
-    /* -----------Borrar esto luego--------------------------------- */
-// Permitir usar el switch incluso sin estar en modo edición
-const isEditing = document.body.classList.contains("editing");
-
-// Si NO está editando, agregar una clase visual al switch para distinguirlo
-if (!isEditing) {
-    devSwitchLabel.textContent = "Modo Dev (vista)";
-}
-
-    /* ------------------------------------------------------------- */
+    }
 
     // Crear el switch de modo dev
     const devSwitchContainer = document.createElement("div");
