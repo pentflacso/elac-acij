@@ -19,6 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     } */
 
+    /* -----------Borrar esto luego--------------------------------- */
+// Permitir usar el switch incluso sin estar en modo edición
+const isEditing = document.body.classList.contains("editing");
+
+// Si NO está editando, agregar una clase visual al switch para distinguirlo
+if (!isEditing) {
+    devSwitchLabel.textContent = "Modo Dev (vista)";
+}
+
+    /* ------------------------------------------------------------- */
+
     // Crear el switch de modo dev
     const devSwitchContainer = document.createElement("div");
     devSwitchContainer.style.display = "flex";
