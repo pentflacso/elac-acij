@@ -2076,6 +2076,20 @@ $yellow: #FDF7BF;
                                                         color: white !important;
                                                     }
                                                 }
+                                            }
+                                            .incorrect{
+                                                background-color: red;
+                                                padding: 10px 15px;
+                                                @include border-radius-4;
+                                                color: white;
+                                                .text-danger{
+                                                    color: white !important;
+                                                }
+                                                .ms-1{
+                                                    p{
+                                                        color: white !important;
+                                                    }
+                                                }
                                             }                                            
                                         }
                                     } 
