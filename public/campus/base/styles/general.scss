@@ -1631,6 +1631,17 @@ $yellow: #FDF7BF;
                         .whatsapp-component{
                             margin-top: 40px;
                         }
+                        .content-table-bd {
+                            .content-card-bd {
+                                .card-bd {
+                                    div[title="Riesgo"] {
+                                        label {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }                    
                 }
             }
@@ -1936,7 +1947,10 @@ $yellow: #FDF7BF;
                     div[role=main]{
                         min-height: 50vh;
                         padding-top: 0!important;       
-                        max-width: 1200px!important;      
+                        max-width: 1200px!important;             
+                        
+                        
+     
                         .btn-primary{
                             @include button(primary);  
                         }
@@ -2078,7 +2092,7 @@ $yellow: #FDF7BF;
                                                 }
                                             }
                                             .incorrect{
-                                                background-color: red;
+                                                background-color: #CA3120;
                                                 padding: 10px 15px;
                                                 @include border-radius-4;
                                                 color: white;
