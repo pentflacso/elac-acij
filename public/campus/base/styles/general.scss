@@ -1527,27 +1527,35 @@ $yellow: #FDF7BF;
     }   
     // Estilos Pop-up
     &.path-mod-page{
-        .moodle-dialogue-base{
-            .moodle-dialogue{
+        
+            .modal-dialog{
+                max-width: initial;
                 position: fixed;  
-                width: 100%!important;
+                width: 100% !important;
                 top: 0!important;
                 bottom: 0!important;
                 left: 0!important;
                 right: 0!important;  
                 background-color: $gray-2!important;
                 overflow-y: scroll;
-                .moodle-dialogue-wrap.moodle-dialogue-content{
+                
+                .modal-content{
                     position: absolute!important;
                     left: 0!important;
                     right: 0!important;
                     margin: 0 auto!important;
-                    max-width: 900px!important;
+                    max-width: 900px !important;
                     border: none!important;
                     background-color: transparent!important;
                     padding: 45px 0!important;
                     @media screen and (max-width: 576px){
                         padding: 55px 0!important;
+                    }
+                    .modal-body{
+                        img{
+                                    width: 100%!important;
+                                    height: auto!important;
+                                } 
                     } 
                     .moodle-dialogue-hd{
                         display: none!important;
@@ -1611,7 +1619,7 @@ $yellow: #FDF7BF;
                     }                
                 }
             }      
-        }
+        
     }    
     // Estilos específicos BD
     &.path-mod-data{
@@ -2054,6 +2062,20 @@ $yellow: #FDF7BF;
                                                 .answernumber{
                                                     min-width: auto;
                                                 }
+                                            }
+                                            .correct{
+                                                background-color: $apple-green;
+                                                padding: 10px 15px;
+                                                @include border-radius-4;
+                                                color: white;
+                                                .text-success{
+                                                    color: white !important;
+                                                }
+                                                .ms-1{
+                                                    p{
+                                                        color: white !important;
+                                                    }
+                                                }
                                             }                                            
                                         }
                                     } 
@@ -2374,6 +2396,15 @@ $yellow: #FDF7BF;
         }
         .btn-footer-popover, .footer-content-popover{
             display: none;
+        }
+    }
+}
+
+#id_summary_editor{
+    .custom-btns{
+        a{
+            background-color: red !important;
+            color: red !important;
         }
     }
 }
