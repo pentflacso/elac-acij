@@ -1538,6 +1538,9 @@ $yellow: #FDF7BF;
                 right: 0!important;  
                 background-color: $gray-2!important;
                 overflow-y: scroll;
+                    &:focus .modal-content {
+                        box-shadow: none !important;
+                        }
                 
                 .modal-content{
                     position: absolute!important;
@@ -1550,41 +1553,30 @@ $yellow: #FDF7BF;
                     padding: 45px 0!important;
                     @media screen and (max-width: 576px){
                         padding: 55px 0!important;
-                    }
+                    }                    
                     .modal-body{
                         img{
-                                    width: 100%!important;
-                                    height: auto!important;
-                                } 
-                    } 
-                    .moodle-dialogue-hd{
-                        display: none!important;
+                            width: 100%!important;
+                            height: auto!important;
+                        } 
                     }
-                    .moodle-dialogue-bd{
-                        .confirmation-dialogue{
-                            display: flex!important;
-                            flex-wrap: wrap!important;
-                            flex-direction: column-reverse!important;
-                            .confirmation-message{
-                                width: 100%!important;
-                                img{
-                                    width: 100%!important;
-                                    height: auto!important;
-                                }                    
-                            }
-                            .confirmation-buttons{
+                    .modal-header {
                                 position: fixed;
-                                top: 20px;
+                                top: 40px;
                                 right: 40px;
                                 @media screen and (max-width: 576px){
                                     top: 15px;
                                     right: 15px;
                                 } 
-                                .btn-primary{
+                                h5 {
+                                    display: none;
+                                }
+                                .btn-close{
                                     background-image: url(/campus/base/img/close_icon.svg);
                                     background-repeat: no-repeat;
                                     background-position: center;
                                     background-size: 25px auto;
+                                    background-color: $black;
                                     width: 50px;
                                     height: 50px;
                                     min-width: 0;
@@ -1614,7 +1606,27 @@ $yellow: #FDF7BF;
                                         transform: scale(.95);  
                                     }
                                 }
-                            } 
+                    }
+                    .modal-footer{
+                        display: none!important;
+                    }                   
+
+                    .moodle-dialogue-hd{
+                        display: none!important;
+                    }
+                    .moodle-dialogue-bd{
+                        .confirmation-dialogue{
+                            display: flex!important;
+                            flex-wrap: wrap!important;
+                            flex-direction: column-reverse!important;
+                            .confirmation-message{
+                                width: 100%!important;
+                                img{
+                                    width: 100%!important;
+                                    height: auto!important;
+                                }                    
+                            }
+                             
                         }                   
                     }                
                 }
