@@ -1538,6 +1538,8 @@ $yellow: #FDF7BF;
                 right: 0!important;  
                 background-color: $gray-2!important;
                 overflow-y: scroll;
+                margin: 0;
+                height: auto;
                     &:focus .modal-content {
                         box-shadow: none !important;
                         }
@@ -1564,6 +1566,7 @@ $yellow: #FDF7BF;
                                 position: fixed;
                                 top: 40px;
                                 right: 40px;
+                                border-bottom: 0;
                                 @media screen and (max-width: 576px){
                                     top: 15px;
                                     right: 15px;
@@ -1630,7 +1633,8 @@ $yellow: #FDF7BF;
                         }                   
                     }                
                 }
-            }      
+            }
+              
         
     }    
     // Estilos específicos BD
