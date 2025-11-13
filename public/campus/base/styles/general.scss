@@ -645,11 +645,14 @@ $yellow: #FDF7BF;
                     {
                         display: none;
                         border: none !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
                     }
 
                      .activity.label
                     {
                         display: block !important;
+                        
                     }
 
 
@@ -667,7 +670,11 @@ $yellow: #FDF7BF;
                                     @media screen and (max-width: 576px){
                                         gap: 10px;
                                     }
-                                    
+                                     &:hover{
+                                        background-color: $black;
+                                        background-image: url(/campus/base/img/libreta-white-icon.svg);
+                                        color: $white;
+                                     }
                                 
                                                                      
                                 
