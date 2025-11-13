@@ -638,6 +638,7 @@ $yellow: #FDF7BF;
                     .course-content-item-content ul.section
                     {
                         display: flex !important;
+                        justify-content: end;
                         gap: 10px;
                     }
                     .activity
@@ -652,7 +653,7 @@ $yellow: #FDF7BF;
                     }
 
 
-                    .activity.label:last-child  a{
+                    .activity.label  a{
                                     display: flex;
                                     align-items: center;
                                     gap: 15px;
