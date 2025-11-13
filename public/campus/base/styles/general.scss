@@ -41,7 +41,8 @@ $yellow: #FDF7BF;
 }
 
 /* Barra de progreso */
- &:not(.editing)
+
+#page-course-view-topics:not(.editing)
  {
 
     .drawer-right
