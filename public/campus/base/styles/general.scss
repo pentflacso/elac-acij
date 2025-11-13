@@ -125,6 +125,7 @@ $yellow: #FDF7BF;
                     margin: 0 !important;
                     display: flex;
                     align-items: center;
+                    font-size: 12px;
                     @media screen and (max-width: 990px) {
                         display: none;
                     }
@@ -647,6 +648,11 @@ $yellow: #FDF7BF;
                         border: none !important;
                         margin: 0 !important;
                         padding: 0 !important;
+                        .activity-item
+                        {
+                            margin: 0 !important;
+                            padding: 0 !important;
+                        }
                     }
 
                      .activity.label
