@@ -549,7 +549,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verificar si el body tiene el ID correcto
         if (document.body.id !== 'page-mod-quiz-view') return;
         
-        const tableQuizSummary = document.querySelector('.quizattemptsummary');
+        const tableQuizSummary = document.querySelector('.quizinfo');
         
         if (tableQuizSummary) return;
         
