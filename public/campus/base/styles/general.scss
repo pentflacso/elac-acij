@@ -35,6 +35,11 @@ $apple-green: #69B620;
 $orange: #F56B30;
 $yellow: #FDF7BF;
 
+#page.drawers.show-drawer-right
+{
+    margin-right: 0 !important;
+}
+
 .drawer-right
 {
     .btn-add-content{
