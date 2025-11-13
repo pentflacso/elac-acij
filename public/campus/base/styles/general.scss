@@ -236,7 +236,7 @@ $yellow: #FDF7BF;
 {
     &:not(.editing){
         //&.editing{
-        .drawer-left, .drawer-right, .drawer
+        .drawer-left
         {
             display: none !important;
         }
