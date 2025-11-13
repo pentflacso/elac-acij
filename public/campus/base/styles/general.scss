@@ -35,6 +35,95 @@ $apple-green: #69B620;
 $orange: #F56B30;
 $yellow: #FDF7BF;
 
+.drawer-right
+{
+    .btn-add-content{
+        display: none;
+    }
+    .drawerheader{
+        display: none;
+    }
+        position: fixed !important;
+        bottom: 0;
+        height: 40px;
+        top: auto !important;
+    .drawercontent
+    {
+        height: auto !important;
+    }
+    .card-title,.header{
+        display: none !important;
+    }
+    display: block !important;
+    visibility: visible;
+    position: relative;
+    width: 100% !important;
+    max-width: none !important;
+    background-color: $aqua-green;
+    .block_html{
+        display: none;
+    }
+    .block_completion_progress_elac
+    {
+        max-width: none;
+        margin: auto;
+        width: 100% !important;
+        background: transparent !important;
+        border:none !important;
+        
+        .card-body
+        {
+           
+            .barRow{
+                height: 15px;
+                min-height: auto !important;
+                border-radius: 0 !important;
+            }
+            background: transparent !important;
+            padding: 0 !important;
+            .progressBarCell.futureNotCompleted
+            {
+                background-color: rgba(0,0,0,.4);
+                border-left: 1px solid  $aqua-green !important;
+                border-top: none;
+                border-right: none;
+
+            }
+            .progressBarCell.completed
+            {
+                background-color: rgba(255,255,255,1);
+                border: none !important;
+
+            }
+            .progressBarCell
+            {
+               
+                 border-radius: 0 !important;
+
+            }
+            .barContainer{
+                width: 50%;
+                padding-top: 5px;
+               
+            }
+            .progressEventInfo{
+                margin: 0 !important;
+            }
+             img{
+                    display: none !important;
+                }
+        }
+        .card-text
+        {
+            margin: 0 !important;
+            display: grid;
+            grid-template-columns: 3fr 1fr 2fr 1fr;
+            
+            
+        }
+    }
+}    
+
 
 // Typography Levels
 @mixin font-level-1 {
@@ -2229,9 +2318,11 @@ $yellow: #FDF7BF;
         }
     }
     // Aplica estilos cuando se desactiva el modo edición.
+    
     &:not(.editing){
     //&.editing{
-        .drawer-left, .drawer-right, .drawer
+    
+    .drawer-left, .drawer
         {
             display: none !important;
         }
