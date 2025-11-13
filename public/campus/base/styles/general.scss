@@ -703,8 +703,7 @@ $yellow: #FDF7BF;
                                     color: $black;                                        
                                     @include border-radius-4;
                                     text-decoration: none;
-                                    border: 2px solid $gray-2;
-                                    padding: 10px 20px;
+                                    border: 2px solid $yellow;    
                                     @media screen and (max-width: 576px){
                                         gap: 10px;
                                     }
@@ -720,7 +719,7 @@ $yellow: #FDF7BF;
                                         background-color: $black;
                                         background-image: url(/campus/base/img/libreta-white-icon.svg);
                                         color: $white;
-                                        border: none;
+                                        border: $yellow;    
                                     }                                      
                                 
                                 }
