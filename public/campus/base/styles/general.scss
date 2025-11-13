@@ -122,13 +122,8 @@ $yellow: #FDF7BF;
                 
                 }
                 .progressEventInfo{
-                    margin: 0 !important;
-                    display: flex;
-                    align-items: center;
-                    font-size: 12px;
-                    @media screen and (max-width: 990px) {
-                        display: none;
-                    }
+                    
+                    display: none;
                 }
                 img{
                         display: none !important;
