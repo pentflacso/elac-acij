@@ -638,6 +638,7 @@ $yellow: #FDF7BF;
                     .course-content-item-content ul.section
                     {
                         display: flex !important;
+                        gap: 10px;
                     }
                     .activity
                     {
@@ -650,7 +651,29 @@ $yellow: #FDF7BF;
                         display: block !important;
                     }
 
-                    .activity.label  a{
+
+                    .activity.label:last-child  a{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 15px;
+                                    @include font-level-3;
+                                    font-weight: 700;
+                                    color: $black;                                        
+                                    @include border-radius-4;
+                                    text-decoration: none;
+                                    border: 2px solid $gray-2;
+                                    padding: 10px 20px;
+                                    @media screen and (max-width: 576px){
+                                        gap: 10px;
+                                    }
+                                    
+                                    padding: 10px 20px 10px 45px;
+                                    border: none;
+                                                                     
+                                
+                                }
+
+                    .activity.label:first-child  a{
                                     display: flex;
                                     align-items: center;
                                     gap: 15px;
