@@ -627,6 +627,11 @@ $yellow: #FDF7BF;
                 }
                 // Estilos Accesos Libreta y Biblioteca 
                 #section-0{ 
+
+                    .section-item{
+                        padding: 0;
+                    }
+
                     background-color: $white;   
                     margin-top: 0;                    
                     margin-bottom: 80px;  
@@ -655,14 +660,16 @@ $yellow: #FDF7BF;
                         }
                     }
 
-                     .activity.label
+                     
+                    label
                     {
                         display: block !important;
                         
                     }
 
 
-                    .activity.label  a{
+                    
+                    label  a{
                                     display: flex;
                                     align-items: center;
                                     gap: 15px;
@@ -686,7 +693,8 @@ $yellow: #FDF7BF;
                                 
                                 }
 
-                    .activity.label:first-child  a{
+                    
+                                label:first-child  a{
                                     display: flex;
                                     align-items: center;
                                     gap: 15px;
