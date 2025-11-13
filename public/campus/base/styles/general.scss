@@ -634,6 +634,22 @@ $yellow: #FDF7BF;
                     @media screen and (max-width: 576px){
                         margin-bottom: 50px;
                     }
+
+                    .course-content-item-content ul.section
+                    {
+                        display: block !important;
+                    }
+                    .activity.label
+                    {
+                        display: none;
+                    }
+
+                     .activity.label
+                    {
+                        display: block !important;
+                    }
+
+
                     .course-section-header{
                         display: none!important;                         
                     }
