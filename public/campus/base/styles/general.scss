@@ -40,124 +40,129 @@ $yellow: #FDF7BF;
     margin-right: 0 !important;
 }
 
-.drawer-right
-{
-    .d-print-none{
+/* Barra de progreso */
+ &:not(.editing)
+ {
+
+    .drawer-right
+    {
+        .d-print-none{
+            display: block !important;
+        }
+        visibility: visible !important;
+        .btn-add-content{
+            display: none;
+        }
+        .drawerheader{
+            display: none;
+        }
+            position: fixed !important;
+            bottom: 0;
+            right: 0 !important;
+            height: 40px !important;
+            top: auto !important;
+        .drawercontent
+        {
+            height: auto !important;
+        }
+        .card-title,.header{
+            display: none !important;
+        }
         display: block !important;
-    }
-    visibility: visible !important;
-    .btn-add-content{
-        display: none;
-    }
-    .drawerheader{
-        display: none;
-    }
-        position: fixed !important;
-        bottom: 0;
-        right: 0 !important;
-        height: 40px !important;
-        top: auto !important;
-    .drawercontent
-    {
-        height: auto !important;
-    }
-    .card-title,.header{
-        display: none !important;
-    }
-    display: block !important;
-    visibility: visible;
-    position: relative;
-    width: 100% !important;
-    max-width: none !important;
-    background-color: $aqua-green;
-    .block_html{
-        display: none;
-    }
-    .block_completion_progress_elac
-    {
-        max-width: none;
-        margin: auto;
+        visibility: visible;
+        position: relative;
         width: 100% !important;
-        background: transparent !important;
-        border:none !important;
-        
-        .card-body
+        max-width: none !important;
+        background-color: $aqua-green;
+        .block_html{
+            display: none;
+        }
+        .block_completion_progress_elac
         {
-           
-            .barRow{
-                height: 15px;
-                min-height: auto !important;
-                border-radius: 0 !important;
-            }
+            max-width: none;
+            margin: auto;
+            width: 100% !important;
             background: transparent !important;
-            padding: 0 !important;
-            .progressBarCell.futureNotCompleted
-            {
-                background-color: rgba(0,0,0,.4);
-                border-left: 1px solid  $aqua-green !important;
-                border-top: none;
-                border-right: none;
-
-            }
-            .progressBarCell.completed
-            {
-                background-color: rgba(255,255,255,1);
-                border: none !important;
-
-            }
-            .progressBarCell
-            {
-               
-                 border-radius: 0 !important;
-
-            }
-            .barContainer{
-                width: 100%;
-                padding-top: 5px;
-               
-            }
-            .progressEventInfo{
-                margin: 0 !important;
-                display: flex;
-                align-items: center;
-                @media screen and (max-width: 990px) {
-                    display: none;
-                }
-            }
-             img{
-                    display: none !important;
-                }
-            .overviewButton{
-                margin: 0 !important;
-                @media screen and (max-width: 990px) {
-                    display: none;
-                }
-                padding: 0 !important;
-                button{
-                    font-size: 11px;
-                    padding: 2px 5px;
-                    border-radius: 100px;
-                }
-            }
-                
-        }
-        .progressPercentage
-                {
-                    font-size: 14px !important;
-                    font-weight: bold;
-                }
-        .card-text
-        {
-            margin: 0 !important;
-            display: grid;
-            grid-template-columns: 3fr 1fr 2fr 1fr;
-            @media screen and (max-width: 990px) {
-                     grid-template-columns: 3fr 1fr ;
-                }
+            border:none !important;
             
+            .card-body
+            {
+            
+                .barRow{
+                    height: 15px;
+                    min-height: auto !important;
+                    border-radius: 0 !important;
+                }
+                background: transparent !important;
+                padding: 0 !important;
+                .progressBarCell.futureNotCompleted
+                {
+                    background-color: rgba(0,0,0,.4);
+                    border-left: 1px solid  $aqua-green !important;
+                    border-top: none;
+                    border-right: none;
+
+                }
+                .progressBarCell.completed
+                {
+                    background-color: rgba(255,255,255,1);
+                    border: none !important;
+
+                }
+                .progressBarCell
+                {
+                
+                    border-radius: 0 !important;
+
+                }
+                .barContainer{
+                    width: 100%;
+                    padding-top: 5px;
+                
+                }
+                .progressEventInfo{
+                    margin: 0 !important;
+                    display: flex;
+                    align-items: center;
+                    @media screen and (max-width: 990px) {
+                        display: none;
+                    }
+                }
+                img{
+                        display: none !important;
+                    }
+                .overviewButton{
+                    margin: 0 !important;
+                    @media screen and (max-width: 990px) {
+                        display: none;
+                    }
+                    padding: 0 !important;
+                    button{
+                        font-size: 11px;
+                        padding: 2px 5px;
+                        border-radius: 100px;
+                    }
+                }
+                    
+            }
+            .progressPercentage
+                    {
+                        font-size: 14px !important;
+                        font-weight: bold;
+                    }
+            .card-text
+            {
+                margin: 0 !important;
+                display: grid;
+                grid-template-columns: 3fr 1fr 2fr 1fr;
+                @media screen and (max-width: 990px) {
+                        grid-template-columns: 3fr 1fr ;
+                    }
+                
+            }
         }
-    }
-}    
+    }    
+}
 
 
 // Typography Levels
